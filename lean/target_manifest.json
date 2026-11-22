@@ -1,0 +1,42 @@
+{
+  "schema_version": "msc-targets/1",
+  "source_label": "thm:full-balanced-value",
+  "scope": "F1",
+  "mandatory_targets": [
+    {
+      "declaration": "CubeSections.maximalSectionVolume",
+      "contract": "CubeSections.UpperBoundStatement",
+      "source": "CubeSections/Main.lean"
+    },
+    {
+      "declaration": "CubeSections.balancedSectionAttains",
+      "contract": "CubeSections.AttainmentStatement",
+      "source": "CubeSections/Geometry/Attainment.lean"
+    },
+    {
+      "declaration": "CubeSections.maximalSectionVolume_eq_iff",
+      "contract": "CubeSections.EqualityStatement",
+      "source": "CubeSections/Main.lean"
+    },
+    {
+      "declaration": "CubeSections.maximalSections_main",
+      "contract": "CubeSections.MainStatement",
+      "source": "CubeSections/Main.lean"
+    }
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "semantic_lemmas": [
+    "CubeSections.sectionMass_eq_hausdorff",
+    "CubeSections.cube_compact",
+    "CubeSections.sectionMass_ne_top",
+    "CubeSections.sectionMass_pos",
+    "CubeSections.sectionVolume_pos",
+    "CubeSections.blockSign_sq",
+    "CubeSections.sharpValue_nonneg"
+  ],
+  "statement": "For every 1 <= k <= n, the sharp intrinsic volume bound, balanced signed-block attainment, and range-based equality characterization."
+}

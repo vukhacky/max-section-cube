@@ -1,0 +1,59 @@
+name: Verify formal proof and computational supplement
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  computation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Check exact certificates and deterministic regeneration
+        run: |
+          python tools/check_repository.py
+          python computation/verify_pairs.py
+          python computation/verify_pairs_independent.py
+          python computation/verify.py
+          python computation/regenerate.py --check
+          python computation/check_lean_data.py --lean-dir lean
+          python computation/export_lean.py --check --lean-dir lean
+          python -m unittest discover -s computation/tests -v
+          python -O -m unittest discover -s computation/tests -v
+      - name: Test verification tooling
+        run: |
+          python -m unittest discover -s lean/scripts/tests -v
+          python -m unittest discover -s tools/tests -v
+
+  lean:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Install the pinned Lean toolchain and dependency cache
+        uses: leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee # v1
+        with:
+          lake-package-directory: lean
+          auto-config: 'false'
+          build: 'false'
+          test: 'false'
+          lint: 'false'
+          use-mathlib-cache: 'true'
+          use-github-cache: 'false'
+      - name: Compile every project module from source
+        working-directory: lean
+        run: python scripts/build.py --fresh
+      - name: Check exact contracts, literal statements and permitted axioms
+        working-directory: lean
+        run: python scripts/check.py --aggregate

@@ -1,0 +1,25 @@
+{
+  "positive_exit": 0,
+  "wrong_body_exit": 101,
+  "unapproved_axiom_exit": 1,
+  "graph_exit": 0,
+  "wrong_body_type_rejected": true,
+  "extra_axiom_rejected": true,
+  "status": "PASS_SMOKE",
+  "note": "Negative controls require the observed type-checking and axiom-policy rejection reasons for nanoda 0.4.31.",
+  "scope": "Valid-proof acceptance and two deliberately invalid negative controls.",
+  "recorded_wrapper_command": [
+    "python3",
+    "lean/scripts/external_check.py",
+    "smoke",
+    "--lean-bin",
+    "${MSC_LEAN_BIN}",
+    "--packages",
+    "${MSC_PACKAGES}"
+  ],
+  "wrapper_command_cwd": "repository root",
+  "command_paths_normalized": true,
+  "valid_proof_stdout": "Checked 38 declarations with no errors\n",
+  "wrong_body_stderr": "\nthread 'thread_0' (59) panicked at src/tc.rs:985:71:\nassertion failed: self.def_eq(u, v)\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n",
+  "unapproved_axiom_stderr": "Error: export file declares unpermitted axiom \"MSCUnapprovedControlAxiom\"\n\nrun with `-h` or `--help` for help\n"
+}

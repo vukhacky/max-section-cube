@@ -1,0 +1,94 @@
+{
+  "schema": "msc-public-tool-tests/1",
+  "status": "PASS_RECORDED_TOOL_CHECKS",
+  "lean_helper_tests": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "lean/scripts/tests",
+      "-v"
+    ],
+    "command_cwd": "repository root",
+    "executions": [
+      {
+        "optimized_python": false,
+        "tests": 18,
+        "exit_code": 0,
+        "log_sha256": "87fc13939a009c6cd3040827874f7d71740facb856ef0bc977b52712ae2e38ac"
+      },
+      {
+        "optimized_python": true,
+        "tests": 18,
+        "exit_code": 0,
+        "log_sha256": "9d1377478e8c67413b65e33b99f28a25bdc87e0311f9d18cfa5cfd326a78b639"
+      }
+    ],
+    "files_sha256": {
+      "lean/scripts/check.py": "d9667623bd6a3561878f8c5d98a32c5c50d791cfeb1e5da6b3053732e0409e43",
+      "lean/scripts/tests/test_verification.py": "aa14e60ceb0ec0b4ca3c9350acff7f453a010e865b2634a805e1d48f98762c56"
+    },
+    "scope": "Cache integrity, fixed contracts, permitted axioms and syntactic universe-suffix parsing; these are not substitutes for proof compilation."
+  },
+  "release_tool_tests": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/tests",
+      "-v"
+    ],
+    "command_cwd": "repository root",
+    "exit_code": 0,
+    "tests_run": 37,
+    "tests_skipped": 0,
+    "tests_failed": 0,
+    "completed_utc": "2026-11-22T21:26:40.277226+00:00",
+    "script_sha256": {
+      "tools/release_manifest.py": "fdd191f9ead4cb89ee843ed38c396cf22954655f6bead687635398743e399578",
+      "tools/check_repository.py": "e72c973554da79748c8d3e0e4eaed3a881adec6f96569531151b7929b2d09da2",
+      "tools/tests/test_release_manifest.py": "45ed6ca6a8d60e762382edb6b6557a6ace1b76af690ca2b0bda370698ced5020"
+    }
+  },
+  "builder_real_compiler_fixture": {
+    "status": "PASS_REAL_COMPILER_CACHE_ROUNDTRIP",
+    "checked_utc": "2026-11-22T21:33:07.811947+00:00",
+    "builder_sha256": "c8dd786a11d7d35623a13739bc252a6e6a7b810480c0f1b1edeae4246ef9f28a",
+    "helper_sha256": "3334745b4f546c44245bf0fb7aac325c0fb353f597050294a480fbeef9c12f2d",
+    "scope": "Isolated one-theorem fixture under the pinned actual compiler; tests output tampering invalidates reuse. Not a full MSC build.",
+    "stages": [
+      {
+        "stage": "initial_compile",
+        "exit_code": 0,
+        "action": "compiled",
+        "seconds": 0.7305616379999265,
+        "output_sha256": "d8c60d31b9560fc696faa942a34b458ae15d2ed571defd62bee5c1176d700618"
+      },
+      {
+        "stage": "matching_cache_reuse",
+        "exit_code": 0,
+        "action": "verified_reuse",
+        "seconds": 0.28290813800049364,
+        "output_sha256": "d8c60d31b9560fc696faa942a34b458ae15d2ed571defd62bee5c1176d700618"
+      },
+      {
+        "stage": "changed_output_recompile",
+        "exit_code": 0,
+        "action": "compiled",
+        "seconds": 0.4074065660024644,
+        "output_sha256": "d8c60d31b9560fc696faa942a34b458ae15d2ed571defd62bee5c1176d700618"
+      },
+      {
+        "stage": "repaired_cache_reuse",
+        "exit_code": 0,
+        "action": "verified_reuse",
+        "seconds": 0.3744669480001903,
+        "output_sha256": "d8c60d31b9560fc696faa942a34b458ae15d2ed571defd62bee5c1176d700618"
+      }
+    ]
+  }
+}

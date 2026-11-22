@@ -1,0 +1,191 @@
+{
+  "schema_version": "msc-computation-verification/1",
+  "status": "PASS_ALL_RECORDED_CHECKS",
+  "checked_utc": "2026-11-22T21:23:04.235590+00:00",
+  "python_version": "3.12.14",
+  "scope": "Exact finite pair comparison and data correspondence; analytic soundness is in the manuscript and Lean development.",
+  "inputs": {
+    "manuscript_sha256": "073a6485b263390f4471a3d974aa25e1d88df84cc204a9c1784400e597c1bd15",
+    "certificate_sha256": "ab63a2c454f9f95cc79dc2e0e0593b470e2bfe147b5cf42e6f72b78a3cb5d45b",
+    "manifest_sha256": "43a56eabfdba8a212a989d80b774937a64c3ee2f0ebf36e4962811ee8d5ccb42"
+  },
+  "two_dimensional_cover": {
+    "cases": 19,
+    "nodes": 6795,
+    "leaves": 3407,
+    "counts_by_quotient": {
+      "2": {
+        "pairs": 3,
+        "projection": 2606,
+        "strip": 531,
+        "maximum_depth": 18
+      },
+      "3": {
+        "pairs": 6,
+        "projection": 49,
+        "strip": 93,
+        "maximum_depth": 8
+      },
+      "4": {
+        "pairs": 10,
+        "projection": 28,
+        "strip": 100,
+        "maximum_depth": 6
+      }
+    }
+  },
+  "three_dimensional_cover": {
+    "cases": 19,
+    "terminal_boxes": 10257,
+    "maximum_depth": 28,
+    "table": "results/pair_cover_3d.txt"
+  },
+  "canonical_data_regeneration": "BYTE_IDENTICAL",
+  "lean_data_correspondence": {
+    "cases": 19,
+    "files": 101,
+    "status": "PASS_LEAN_JSON_DATA_CORRESPONDENCE"
+  },
+  "lean_data_regeneration": {
+    "modules": 101,
+    "status": "BYTE_IDENTICAL_LEAN_DATA_REGENERATION"
+  },
+  "tests": {
+    "number": 23,
+    "normal_exit_code": 0,
+    "optimized_python_exit_code": 0,
+    "negative_controls": "Wrong or incomplete covers, invalid leaf witnesses, encodings/types, source/data checksum mismatches and changed Lean tree."
+  },
+  "executions": [
+    {
+      "name": "manuscript_2d",
+      "command": [
+        "python3",
+        "computation/verify_pairs.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.2344763869987219,
+      "stdout_sha256": "af43faf344aa0734f9d923b29e17449635207f69a1d85c2a565cbfc8196ab266",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "manuscript_3d",
+      "command": [
+        "python3",
+        "computation/verify_pairs_independent.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.1035358590015676,
+      "stdout_sha256": "ff979ad6c247c0d5317dd91bfd2056c9cc1f6e253539cd479c3739e4989c7342",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "canonical_replay",
+      "command": [
+        "python3",
+        "computation/verify.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.30639011099992786,
+      "stdout_sha256": "ee078c354be90407c318f7c4b675195cdad1d86ce171bf8d99d08052408c3f9a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "regeneration",
+      "command": [
+        "python3",
+        "computation/regenerate.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9783389180011,
+      "stdout_sha256": "c48ad2cadebaa0d8ab1ca6102970ce26bf59f50de5e522086643f582457ef033",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "lean_data_correspondence",
+      "command": [
+        "python3",
+        "computation/check_lean_data.py",
+        "--lean-dir",
+        "lean"
+      ],
+      "exit_code": 0,
+      "seconds": 1.5995572980027646,
+      "stdout_sha256": "fa82ce436ce0066a72c2d9da2dd93984f8193d8adaa8a1c4c48d1488972ce382",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "lean_data_regeneration",
+      "command": [
+        "python3",
+        "computation/export_lean.py",
+        "--check",
+        "--lean-dir",
+        "lean"
+      ],
+      "exit_code": 0,
+      "seconds": 0.565935869999521,
+      "stdout_sha256": "f42adf8029dcab1e2582f6cbc81ed51c1c7635be90d23f891d2107d228750ea3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "manifest_current",
+      "command": [
+        "python3",
+        "computation/refresh_manifest.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.502817963999405,
+      "stdout_sha256": "8590d017217f3417a315f7d3e575ffec01f1ea9a0c73551c89c99b92a86e149b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "negative_tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "computation/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 1.6601540459996613,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "9ac97e63a37056d850b30cc3def88da0f12b079130db0bb0448862e7e790baa1"
+    },
+    {
+      "name": "optimized_negative_tests",
+      "command": [
+        "python3",
+        "-O",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "computation/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "seconds": 1.3398525140000856,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "783639916d278e1bdf9c13fa71aa30f52bae4cda6b5b342c18c6519387470c35"
+    }
+  ],
+  "script_sha256": {
+    "verify_pairs.py": "8e61bb984bc567ab8f6fe456c38fbc62e30d71839aac0f4b205fbb195907a2d7",
+    "verify_pairs_independent.py": "91b25c086caa74201978838558ed26c68cc5b11e50db6206f4892ec09fa7672e",
+    "verify.py": "93d3bda57c65b2d5a89ddd77fa81fea00d2157f58d8d48191d92ac38f6c489c9",
+    "regenerate.py": "e5310629f09662291367e4cb33f6e1f09a6de244c2445ea86410fd5e27b95b46",
+    "check_lean_data.py": "e5adf31eb2a7be41b7539ee7172d27f5d0a1611e593eb63f80901364eab1a30c",
+    "export_lean.py": "ca303086e78d3ed8574f8b2d184aca6aabcbfa388f19df0f3e7dcb1558915254",
+    "refresh_manifest.py": "46a72ea910f5d8ca576e9b65c19921fccf1be745d4e50032308adfa67308a122",
+    "tests/test_verifier.py": "5f48eebf3025fda08a52a65c386491f238a2625effc746e364df7e1692efbe17"
+  },
+  "result_sha256": {
+    "results/pair_cover_2d.txt": "af43faf344aa0734f9d923b29e17449635207f69a1d85c2a565cbfc8196ab266",
+    "results/pair_cover_3d.txt": "ff979ad6c247c0d5317dd91bfd2056c9cc1f6e253539cd479c3739e4989c7342"
+  }
+}

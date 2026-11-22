@@ -1,0 +1,163 @@
+{
+  "schema": "msc-public-verification-results/1",
+  "status": "PASS_RECORDED_LOCAL_VERIFICATION",
+  "prepared_utc": "2026-11-22T22:14:49.449095+00:00",
+  "scope": "Sharp maximal central-section volume, balanced signed-block attainment, and range-based equality classification for every 1 <= k <= n.",
+  "contracts": [
+    {
+      "declaration": "CubeSections.maximalSectionVolume",
+      "status": "CHECKED",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "CubeSections.balancedSectionAttains",
+      "status": "CHECKED",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "CubeSections.maximalSectionVolume_eq_iff",
+      "status": "CHECKED",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    {
+      "declaration": "CubeSections.maximalSections_main",
+      "status": "CHECKED",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  ],
+  "pins": {
+    "lean_version": "4.37.0-rc1",
+    "lean_commit": "0b77e12952ad39077d80d8bd6b66d601f225c321",
+    "mathlib_commit": "c47f9ad906c5ec32a953f99911b446cd26dcc123",
+    "all_dependencies": {
+      "mathlib": "c47f9ad906c5ec32a953f99911b446cd26dcc123",
+      "plausible": "0d8633efc105d6b15b59a8103614ae0291ee8827",
+      "LeanSearchClient": "146200e1ecbf7397e361475b5c0905adc5fe0670",
+      "importGraph": "cf947504529b8e2ee114e852133d13e4ac923e9b",
+      "proofwidgets": "197b8bdfd8bbfea6dff6ac04170a710b231c3aaa",
+      "aesop": "637fdbb8689a3387a82568b07355231f892144d7",
+      "Qq": "ad0c9f87cfe7b41b93446472004724a1646a22f4",
+      "batteries": "1804c8a02e64fdd55b24db6de5738ffa128d1ec1",
+      "Cli": "c830de39b67d5d447d854a4e390fff9bb0a9c897"
+    }
+  },
+  "lean_sources": {
+    "compiled_main_modules": 349,
+    "directly_checked_audit_sources": 6,
+    "total": 355,
+    "build": "lean_build.json",
+    "contracts": "contract_check.json",
+    "audit_sources": "audit_sources.json"
+  },
+  "selected_public_theorems": 3012,
+  "external_proof_check": {
+    "record": "external_check.json",
+    "status": "PASS_EXPORTED_PROOF_TYPE_CHECK",
+    "declarations": 87154,
+    "expressions": 18514315,
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "raw_export_distributed": false
+  },
+  "computation": {
+    "record": "../computation/verification.json",
+    "record_sha256": "e8f1473e83925d679d65e5914030ee36b0eb972878201ace0924a3aa56f53ff4",
+    "status": "PASS_ALL_RECORDED_CHECKS",
+    "two_dimensional_cover": {
+      "cases": 19,
+      "nodes": 6795,
+      "leaves": 3407,
+      "counts_by_quotient": {
+        "2": {
+          "pairs": 3,
+          "projection": 2606,
+          "strip": 531,
+          "maximum_depth": 18
+        },
+        "3": {
+          "pairs": 6,
+          "projection": 49,
+          "strip": 93,
+          "maximum_depth": 8
+        },
+        "4": {
+          "pairs": 10,
+          "projection": 28,
+          "strip": 100,
+          "maximum_depth": 6
+        }
+      }
+    },
+    "three_dimensional_cover": {
+      "cases": 19,
+      "terminal_boxes": 10257,
+      "maximum_depth": 28,
+      "table": "../computation/results/pair_cover_3d.txt"
+    },
+    "canonical_data_regeneration": "BYTE_IDENTICAL",
+    "lean_data_correspondence": {
+      "cases": 19,
+      "files": 101,
+      "status": "PASS_LEAN_JSON_DATA_CORRESPONDENCE"
+    },
+    "lean_data_regeneration": {
+      "modules": 101,
+      "status": "BYTE_IDENTICAL_LEAN_DATA_REGENERATION"
+    },
+    "tests": {
+      "number": 23,
+      "normal_exit_code": 0,
+      "optimized_python_exit_code": 0,
+      "negative_controls": "Wrong or incomplete covers, invalid leaf witnesses, encodings/types, source/data checksum mismatches and changed Lean tree."
+    }
+  },
+  "tool_tests": {
+    "record": "tool_tests.json",
+    "lean_helper_tests": 18,
+    "lean_helper_tests_optimized": 18,
+    "release_tool_tests": 37,
+    "real_compiler_cache_fixture": "PASS; separate one-theorem fixture, not the MSC source build"
+  },
+  "recording_policy": "Only completed actual runs are reported. Compiler commands use documented path parameters; recorded hashes, mathematical signatures, exit codes and timings are preserved.",
+  "continuous_integration": {
+    "url": "https://github.com/vukhacky/max-section-cube/actions",
+    "note": "These are local verification records. Inspect GitHub Actions separately for a particular remote commit."
+  },
+  "limits": [
+    "This verifies the four stated main contracts; it does not assert a formalization of every auxiliary manuscript statement, stability result or application.",
+    "The Lean source build used existing pinned dependency objects. The external checker checked the selected actual proof closure; a complete source/object rebuild of all dependency definitions was not performed.",
+    "Compiler/exporter/checker binaries are hash-identified, not bootstrapped or independently authenticated from upstream.",
+    "Exact Python certificates and data checks supplement the formal soundness/coverage/geometric bridge proofs; they do not replace those proofs."
+  ],
+  "records_sha256": {
+    "lean_build.json": "ef0398b939d724658734bf0614b01d1f1c69840079aee6d2a70d73255e9fa77a",
+    "contract_check.json": "96e313f5f56c9463b751259a72241fa4b84d66486a0c94ed600d1e787cdfc515",
+    "contract_check.log": "68dd7a969be8564aded0925402fdbb0178897a377f610c5e5912032f2c831839",
+    "audit_sources.json": "ca54cc222bfea025255fd01e6c6a439c382d50c08ab4f84fc0506b252bea65d5",
+    "tool_tests.json": "3f642f7b01d3f7a1202cdafa8e528f9b1cdbd58ffee5dc2fb41772deed624b83",
+    "external_check.json": "9f440704d09bacea66294eb1009cab274c24d3f637b06ebe437d7e57c3fd6de2",
+    "external_graph.json": "436ae1f15e1027e56d71bcd02bc99269b928bc6414732e51f0f92ca4893e2904",
+    "external_signatures.txt": "cd776eaa230209c1ba68132b727d583301d725ea954f9fd0b19d7479971791c9",
+    "external_controls.json": "1a1b915463e881766ab1b4ede1b8bc6bcc864b6f2c144ef0becaa4a7cd8c5ad2",
+    "external_checker.stdout.log": "632ec8a430b40a832c8491662fd4604ee065ee77da5f9f98bb953ee46bf9be93"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "axioms": {
+    "CubeSections.balancedSectionAttains": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CubeSections.maximalSectionVolume": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CubeSections.maximalSectionVolume_eq_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "CubeSections.maximalSections_main": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MSCVerification.attainment_as_stated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MSCVerification.bound_as_stated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "MSCVerification.equality_as_stated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "check_source_sha256": "ce6a695f21481470ddf633f950ec1304a6a1c2145fb30821f75083fbd6d70bd9",
+  "compiler_exit_code": 0,
+  "environment": {
+    "lake_manifest_sha256": "a942cf033cd8523772dad250106f55719c969f0325dea3bc140750756af95860",
+    "lakefile_sha256": "38890b0d65129a00d94ce843d3d3fde70bf42f37effb08cc444c77fd0bbf79b1",
+    "lean_binary_sha256": "d42bdbe506509e88ecadfef183c0df6f55ddb4dd0c7a9933cb224000c0688490",
+    "lean_shared_library_sha256": "5ec16eaf15dec017177f8a5bb7e496588101fea78c45171729fee99d1a857fcd",
+    "lean_version": "Lean (version 4.37.0-rc1, x86_64-unknown-linux-gnu, commit 0b77e12952ad39077d80d8bd6b66d601f225c321, Release)",
+    "package_revisions": {
+      "Cli": "c830de39b67d5d447d854a4e390fff9bb0a9c897",
+      "LeanSearchClient": "146200e1ecbf7397e361475b5c0905adc5fe0670",
+      "Qq": "ad0c9f87cfe7b41b93446472004724a1646a22f4",
+      "aesop": "637fdbb8689a3387a82568b07355231f892144d7",
+      "batteries": "1804c8a02e64fdd55b24db6de5738ffa128d1ec1",
+      "importGraph": "cf947504529b8e2ee114e852133d13e4ac923e9b",
+      "mathlib": "c47f9ad906c5ec32a953f99911b446cd26dcc123",
+      "plausible": "0d8633efc105d6b15b59a8103614ae0291ee8827",
+      "proofwidgets": "197b8bdfd8bbfea6dff6ac04170a710b231c3aaa"
+    },
+    "toolchain_file_sha256": "f11739c25d1640e2b3fda8a98af6d64e97d7b2b1c99840535587a9079b3afee7"
+  },
+  "interpretation": "Compiler-checked contract inhabitation and axiom summaries; optional external_check.py checks exported proof bodies.",
+  "literal_targets": [
+    "MSCVerification.bound_as_stated",
+    "MSCVerification.equality_as_stated",
+    "MSCVerification.attainment_as_stated"
+  ],
+  "log_sha256": "68dd7a969be8564aded0925402fdbb0178897a377f610c5e5912032f2c831839",
+  "schema": "msc-contract-check/1",
+  "seconds": 18.95988323599886,
+  "started_utc": "2026-11-22T22:07:22.280878+00:00",
+  "status": "PASS",
+  "targets": [
+    "CubeSections.maximalSectionVolume",
+    "CubeSections.balancedSectionAttains",
+    "CubeSections.maximalSectionVolume_eq_iff",
+    "CubeSections.maximalSections_main"
+  ],
+  "source_check_script": "lean/scripts/check.py",
+  "source_check_script_sha256": "d9667623bd6a3561878f8c5d98a32c5c50d791cfeb1e5da6b3053732e0409e43",
+  "command": [
+    "python3",
+    "lean/scripts/check.py",
+    "--lean-bin",
+    "${MSC_LEAN_BIN}",
+    "--packages",
+    "${MSC_PACKAGES}",
+    "--aggregate"
+  ],
+  "command_cwd": "repository root",
+  "reproduction_command": [
+    "python3",
+    "lean/scripts/check.py",
+    "--aggregate"
+  ],
+  "public_log": "contract_check.log",
+  "public_log_sha256": "68dd7a969be8564aded0925402fdbb0178897a377f610c5e5912032f2c831839",
+  "path_normalization": {
+    "command_paths_normalized": true,
+    "MSC_LEAN_BIN": "Directory containing the pinned lean executable.",
+    "MSC_PACKAGES": "Directory containing the pinned dependency packages.",
+    "compiler_log_copied_byte_for_byte": true,
+    "unchanged_fields": "Compiler results, mathematical output, hashes and timings."
+  }
+}

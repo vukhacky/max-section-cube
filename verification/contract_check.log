@@ -1,0 +1,7 @@
+'CubeSections.maximalSectionVolume' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CubeSections.balancedSectionAttains' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CubeSections.maximalSectionVolume_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CubeSections.maximalSections_main' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MSCVerification.bound_as_stated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MSCVerification.equality_as_stated' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MSCVerification.attainment_as_stated' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,130 @@
+{
+  "schema": "msc-public-audit-source-checks/1",
+  "status": "PASS_ALL_SIX_AUDIT_SOURCES",
+  "command": [
+    "python3",
+    "lean/scripts/check.py",
+    "--lean-bin",
+    "${MSC_LEAN_BIN}",
+    "--packages",
+    "${MSC_PACKAGES}",
+    "--aggregate"
+  ],
+  "command_cwd": "repository root",
+  "reproduction_command": [
+    "python3",
+    "lean/scripts/check.py",
+    "--aggregate"
+  ],
+  "script_sha256": "d9667623bd6a3561878f8c5d98a32c5c50d791cfeb1e5da6b3053732e0409e43",
+  "audit_sources_checked": 6,
+  "aggregate": {
+    "source": "lean/CubeSections/CheckpointAudit.lean",
+    "compiler_exit_code": 0,
+    "log_sha256": "32589c75fa3297efe0db20d94487cde9df34b66b996694f49fcd059d02fe9337",
+    "seconds": 20.302540959997714,
+    "selected_public_theorem_count": 3012,
+    "source_sha256": "c24601a0b76d7deecee46952f608e77856205aafedf98a24fa5bcdf32b495cbe",
+    "status": "PASS"
+  },
+  "additional_sources": [
+    {
+      "compiler_exit_code": 0,
+      "log_sha256": "37c328080b81dca6d18e3b135f5691911a63c77ca1256afd805f8ba4bcdf6cdd",
+      "printed_axiom_reports": 123,
+      "printed_axioms_permitted": true,
+      "seconds": 11.605462366998836,
+      "source": "lean/CubeSections/Analysis/BranchAxioms.lean",
+      "source_sha256": "d2d50c54786c04e9c569f4b7f95dd9cd8796e3460d50f4881cbfb94c1ad5f7b1",
+      "source_unchanged": true,
+      "status": "PASS",
+      "command": [
+        "${MSC_LEAN_BIN}/lean",
+        "-j1",
+        "-M6144",
+        "CubeSections/Analysis/BranchAxioms.lean"
+      ],
+      "command_cwd": "lean"
+    },
+    {
+      "compiler_exit_code": 0,
+      "log_sha256": "bda830ceb0c14ed6cf4cc26efbd39bb851979d26b59e201c8edade934e34babc",
+      "printed_axiom_reports": 28,
+      "printed_axioms_permitted": true,
+      "seconds": 11.60955668799943,
+      "source": "lean/CubeSections/Certificates/Audit.lean",
+      "source_sha256": "54ab73d9e9e04073e56acff85ce4686c7815424b790d0f42caf4c91d1740cc0c",
+      "source_unchanged": true,
+      "status": "PASS",
+      "command": [
+        "${MSC_LEAN_BIN}/lean",
+        "-j1",
+        "-M6144",
+        "CubeSections/Certificates/Audit.lean"
+      ],
+      "command_cwd": "lean"
+    },
+    {
+      "compiler_exit_code": 0,
+      "log_sha256": "ae3d596252e1f458cf3b2ff945f8d83ac17dd48fa4d60e9dd4bc1e4d4eb21623",
+      "printed_axiom_reports": 35,
+      "printed_axioms_permitted": true,
+      "seconds": 11.315106869999,
+      "source": "lean/CubeSections/Classical/Audit.lean",
+      "source_sha256": "1e3ad338539fcf96e7275532315aaeaf79c01911248f3b23b3f1085b7b89bc9d",
+      "source_unchanged": true,
+      "status": "PASS",
+      "command": [
+        "${MSC_LEAN_BIN}/lean",
+        "-j1",
+        "-M6144",
+        "CubeSections/Classical/Audit.lean"
+      ],
+      "command_cwd": "lean"
+    },
+    {
+      "compiler_exit_code": 0,
+      "log_sha256": "d3bc487bd741b2636f3081724324d573f9bd55be22ef456d3bc89269c7da7752",
+      "printed_axiom_reports": 131,
+      "printed_axioms_permitted": true,
+      "seconds": 41.89240881300066,
+      "source": "lean/CubeSections/Geometry/Audit.lean",
+      "source_sha256": "51d78aae5e3c96db0402341bdf99aab4af7a58d14508fca8b527ee72f6dd4471",
+      "source_unchanged": true,
+      "status": "PASS",
+      "command": [
+        "${MSC_LEAN_BIN}/lean",
+        "-j1",
+        "-M6144",
+        "CubeSections/Geometry/Audit.lean"
+      ],
+      "command_cwd": "lean"
+    },
+    {
+      "compiler_exit_code": 0,
+      "log_sha256": "ec9839a56752b22a553f5fd71dd29c5631f903b40fcedfbf3b73fb3356605998",
+      "printed_axiom_reports": 145,
+      "printed_axioms_permitted": true,
+      "seconds": 21.47668682600124,
+      "source": "lean/CubeSections/Integer/Audit.lean",
+      "source_sha256": "74749dc4e7bcf9c15cbe713a019723c79bc697433ddf6fb82fd2224db9d14ba4",
+      "source_unchanged": true,
+      "status": "PASS",
+      "command": [
+        "${MSC_LEAN_BIN}/lean",
+        "-j1",
+        "-M6144",
+        "CubeSections/Integer/Audit.lean"
+      ],
+      "command_cwd": "lean"
+    }
+  ],
+  "objects_written": false,
+  "coverage": {
+    "main_import_closure": 349,
+    "audit_only_sources": 6,
+    "total_checked_in_lean_sources": 355
+  },
+  "normalization": "Command paths are normalized to documented MSC_LEAN_BIN and MSC_PACKAGES parameters or paths relative to the recorded working directory; all flags, compiler results and hashes are unchanged.",
+  "scope": "The aggregate count is selected public project theorems, not all transitive Lean/Mathlib dependencies. Individual audit files may print overlapping sets of declarations."
+}

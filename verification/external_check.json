@@ -1,0 +1,298 @@
+{
+  "schema": "msc-public-external-proof-check/1",
+  "status": "PASS_EXPORTED_PROOF_TYPE_CHECK",
+  "targets": [
+    "CubeSections.maximalSectionVolume",
+    "CubeSections.balancedSectionAttains",
+    "CubeSections.maximalSectionVolume_eq_iff",
+    "CubeSections.maximalSections_main"
+  ],
+  "export": {
+    "sha256": "0b089a53d0dd038b966532d29f072a4a3928229cd112fa619fb2efb880e2b96a",
+    "bytes": 999902425,
+    "records": 19023591,
+    "expressions": 18514315,
+    "declarations": 87154,
+    "distributed": false,
+    "reproduction_command": [
+      "python3",
+      "lean/scripts/external_check.py",
+      "export"
+    ],
+    "reproduction_cwd": "repository root"
+  },
+  "exporter": {
+    "name": "lean4export",
+    "version": "3.1.0",
+    "format_version": "3.1.0",
+    "binary_sha256": "4f5226680a15811444273975284fcb78cf7f8e6af7afa6312ab41a5b945b8542",
+    "bundled_lean_metadata": {
+      "githash": "0b77e12952ad39077d80d8bd6b66d601f225c321",
+      "version": "4.37.0-rc1"
+    },
+    "bundled_source_sha256": {
+      "src/lean/LeanExport.lean": "ec95c53d108c5b014e7a53d6b88a4dbe41dc75c2e55102b2f8211268fcb94cf5",
+      "src/lean/LeanExport/Basic.lean": "2e839d4ac1ef1992cfe09c489a97928ad8f8eaea3925bc76b511c6bf85e1b8aa",
+      "src/lean/LeanExport/Parse.lean": "93eb2df13abd809e8ec040acc544d0030a01024cd47e7d2c27455f8debb97972"
+    },
+    "source_origin": "Bundled LeanExport sources in the identified Lean distribution; no separate exporter source commit is asserted."
+  },
+  "checker": {
+    "name": "nanoda",
+    "version": "0.4.31",
+    "binary_sha256": "5c34d6124b19dfd23c7d0377b520893cf8adec5c23fa0c809dde9e38eb201ffe",
+    "version_identification": "Help output identifying this same binary hash.",
+    "source_repository": null,
+    "source_commit": null,
+    "source_provenance_note": "A nanoda source repository/commit was not established in this verification record."
+  },
+  "settings": {
+    "use_stdin": false,
+    "num_threads": 1,
+    "stack_size_bytes": 67108864,
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "unpermitted_axiom_hard_error": true,
+    "unsafe_permit_all_axioms": false,
+    "nat_extension": true,
+    "string_extension": true,
+    "pp_declars": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound",
+      "CubeSections.maximalSectionVolume",
+      "CubeSections.balancedSectionAttains",
+      "CubeSections.maximalSectionVolume_eq_iff",
+      "CubeSections.maximalSections_main",
+      "CubeSections.UpperBoundStatement",
+      "CubeSections.EqualityStatement",
+      "CubeSections.AttainmentStatement",
+      "CubeSections.MainStatement"
+    ],
+    "pp_to_stdout": false,
+    "print_success_message": true
+  },
+  "settings_path_normalization": "Only export/pretty-output machine paths are omitted; all logical settings are preserved.",
+  "path_parameters": {
+    "MSC_LEAN_BIN": "Directory containing the pinned Lean and external checker executables.",
+    "MSC_LEAN_RUNTIME": "Parent directory of MSC_LEAN_BIN, used as LEAN_SYSROOT.",
+    "MSC_PACKAGES": "Directory containing the pinned dependency packages.",
+    "REPOSITORY_ROOT": "Root of the checked source distribution."
+  },
+  "stages": [
+    {
+      "exit_code": 0,
+      "started_utc": "2026-11-22T21:56:57.373328+00:00",
+      "seconds": 436.99924479900073,
+      "stdout_sha256": "0b089a53d0dd038b966532d29f072a4a3928229cd112fa619fb2efb880e2b96a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compiler_or_checker_sha256": "4f5226680a15811444273975284fcb78cf7f8e6af7afa6312ab41a5b945b8542",
+      "stage": "export",
+      "recorded_command": [
+        "${MSC_LEAN_BIN}/leanexport",
+        "CubeSections.Main",
+        "--",
+        "CubeSections.maximalSectionVolume",
+        "CubeSections.balancedSectionAttains",
+        "CubeSections.maximalSectionVolume_eq_iff",
+        "CubeSections.maximalSections_main"
+      ],
+      "command_cwd": "lean/.lake/verification/external",
+      "recorded_environment": {
+        "LEAN_PATH": "${REPOSITORY_ROOT}/lean/.lake/build/lib/lean:${MSC_PACKAGES}/mathlib/.lake/build/lib/lean:${MSC_PACKAGES}/plausible/.lake/build/lib/lean:${MSC_PACKAGES}/LeanSearchClient/.lake/build/lib/lean:${MSC_PACKAGES}/importGraph/.lake/build/lib/lean:${MSC_PACKAGES}/proofwidgets/.lake/build/lib/lean:${MSC_PACKAGES}/aesop/.lake/build/lib/lean:${MSC_PACKAGES}/Qq/.lake/build/lib/lean:${MSC_PACKAGES}/batteries/.lake/build/lib/lean",
+        "LEAN_SYSROOT": "${MSC_LEAN_RUNTIME}",
+        "LEAN_ABORT_ON_PANIC": "1"
+      },
+      "command_path_normalization": true,
+      "recorded_wrapper_command": [
+        "python3",
+        "lean/scripts/external_check.py",
+        "export",
+        "--lean-bin",
+        "${MSC_LEAN_BIN}",
+        "--packages",
+        "${MSC_PACKAGES}"
+      ],
+      "wrapper_command_cwd": "repository root"
+    },
+    {
+      "exit_code": 0,
+      "started_utc": "2026-11-22T22:09:43.211330+00:00",
+      "seconds": 54.750129841999296,
+      "stdout_sha256": "de82776a92ce3a413bb7c118f5d0a328e0e82342ad7366a83ea732f67e51ca67",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compiler_or_checker_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+      "stage": "graph",
+      "recorded_command": [
+        "python3",
+        "${REPOSITORY_ROOT}/lean/scripts/verify_export_graph.py",
+        "${REPOSITORY_ROOT}/lean/.lake/verification/external/targets.ndjson",
+        "--output",
+        "${REPOSITORY_ROOT}/lean/.lake/verification/external/targets_graph.json"
+      ],
+      "command_cwd": "lean/.lake/verification/external",
+      "recorded_environment": {
+        "LEAN_PATH": "${REPOSITORY_ROOT}/lean/.lake/build/lib/lean:${MSC_PACKAGES}/mathlib/.lake/build/lib/lean:${MSC_PACKAGES}/plausible/.lake/build/lib/lean:${MSC_PACKAGES}/LeanSearchClient/.lake/build/lib/lean:${MSC_PACKAGES}/importGraph/.lake/build/lib/lean:${MSC_PACKAGES}/proofwidgets/.lake/build/lib/lean:${MSC_PACKAGES}/aesop/.lake/build/lib/lean:${MSC_PACKAGES}/Qq/.lake/build/lib/lean:${MSC_PACKAGES}/batteries/.lake/build/lib/lean",
+        "LEAN_SYSROOT": "${MSC_LEAN_RUNTIME}",
+        "LEAN_ABORT_ON_PANIC": "1"
+      },
+      "command_path_normalization": true,
+      "recorded_wrapper_command": [
+        "python3",
+        "lean/scripts/external_check.py",
+        "graph",
+        "--lean-bin",
+        "${MSC_LEAN_BIN}",
+        "--packages",
+        "${MSC_PACKAGES}"
+      ],
+      "wrapper_command_cwd": "repository root"
+    },
+    {
+      "exit_code": 0,
+      "started_utc": "2026-11-22T22:10:53.319419+00:00",
+      "seconds": 149.9994094820031,
+      "stdout_sha256": "632ec8a430b40a832c8491662fd4604ee065ee77da5f9f98bb953ee46bf9be93",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "compiler_or_checker_sha256": "5c34d6124b19dfd23c7d0377b520893cf8adec5c23fa0c809dde9e38eb201ffe",
+      "stage": "nanoda",
+      "recorded_command": [
+        "${MSC_LEAN_BIN}/nanoda_bin",
+        "${REPOSITORY_ROOT}/lean/.lake/verification/external/nanoda_targets.json"
+      ],
+      "command_cwd": "lean/.lake/verification/external",
+      "recorded_environment": {
+        "LEAN_PATH": "${REPOSITORY_ROOT}/lean/.lake/build/lib/lean:${MSC_PACKAGES}/mathlib/.lake/build/lib/lean:${MSC_PACKAGES}/plausible/.lake/build/lib/lean:${MSC_PACKAGES}/LeanSearchClient/.lake/build/lib/lean:${MSC_PACKAGES}/importGraph/.lake/build/lib/lean:${MSC_PACKAGES}/proofwidgets/.lake/build/lib/lean:${MSC_PACKAGES}/aesop/.lake/build/lib/lean:${MSC_PACKAGES}/Qq/.lake/build/lib/lean:${MSC_PACKAGES}/batteries/.lake/build/lib/lean",
+        "LEAN_SYSROOT": "${MSC_LEAN_RUNTIME}",
+        "LEAN_ABORT_ON_PANIC": "1"
+      },
+      "command_path_normalization": true,
+      "recorded_wrapper_command": [
+        "python3",
+        "lean/scripts/external_check.py",
+        "nanoda",
+        "--lean-bin",
+        "${MSC_LEAN_BIN}",
+        "--packages",
+        "${MSC_PACKAGES}",
+        "--timeout",
+        "3600"
+      ],
+      "wrapper_command_cwd": "repository root"
+    }
+  ],
+  "stdout": "external_checker.stdout.log",
+  "stdout_sha256": "632ec8a430b40a832c8491662fd4604ee065ee77da5f9f98bb953ee46bf9be93",
+  "actual_body_graph": "external_graph.json",
+  "actual_body_graph_sha256": "436ae1f15e1027e56d71bcd02bc99269b928bc6414732e51f0f92ca4893e2904",
+  "signatures": "external_signatures.txt",
+  "signatures_sha256": "cd776eaa230209c1ba68132b727d583301d725ea954f9fd0b19d7479971791c9",
+  "controls": "external_controls.json",
+  "controls_sha256": "1a1b915463e881766ab1b4ede1b8bc6bcc864b6f2c144ef0becaa4a7cd8c5ad2",
+  "per_target": [
+    {
+      "targets": [
+        "CubeSections.maximalSectionVolume"
+      ],
+      "reachable_declarations": 87153,
+      "reachable_expressions": 18514309,
+      "declaration_kinds": {
+        "axiom": 3,
+        "ctor": 1183,
+        "def": 26036,
+        "induct": 1078,
+        "opaque": 2,
+        "quot": 4,
+        "rec": 1080,
+        "thm": 57767
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "unapproved_axioms": [],
+      "unsafe_or_partial": []
+    },
+    {
+      "targets": [
+        "CubeSections.balancedSectionAttains"
+      ],
+      "reachable_declarations": 37787,
+      "reachable_expressions": 3599337,
+      "declaration_kinds": {
+        "axiom": 3,
+        "ctor": 952,
+        "def": 8071,
+        "induct": 866,
+        "opaque": 2,
+        "quot": 4,
+        "rec": 868,
+        "thm": 27021
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "unapproved_axioms": [],
+      "unsafe_or_partial": []
+    },
+    {
+      "targets": [
+        "CubeSections.maximalSectionVolume_eq_iff"
+      ],
+      "reachable_declarations": 87153,
+      "reachable_expressions": 18514312,
+      "declaration_kinds": {
+        "axiom": 3,
+        "ctor": 1183,
+        "def": 26036,
+        "induct": 1078,
+        "opaque": 2,
+        "quot": 4,
+        "rec": 1080,
+        "thm": 57767
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "unapproved_axioms": [],
+      "unsafe_or_partial": []
+    },
+    {
+      "targets": [
+        "CubeSections.maximalSections_main"
+      ],
+      "reachable_declarations": 87152,
+      "reachable_expressions": 18514305,
+      "declaration_kinds": {
+        "axiom": 3,
+        "ctor": 1183,
+        "def": 26036,
+        "induct": 1078,
+        "opaque": 2,
+        "quot": 4,
+        "rec": 1080,
+        "thm": 57766
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "unapproved_axioms": [],
+      "unsafe_or_partial": []
+    }
+  ],
+  "trust_limits": [
+    "The graph traversal inventories actual expressions; nanoda performs the separate type check.",
+    "Binary identities are recorded; no compiler/exporter/checker bootstrap or independently authenticated distribution checksum is asserted.",
+    "Actual dependency theorem bodies are checked, but every cached dependency definition has not been rebuilt from source."
+  ]
+}

@@ -1,0 +1,44 @@
+import CubeSections.Classical.BallProved
+import CubeSections.Classical.SincBLLine
+
+/-! Theorem-signature and axiom audit of the classical branch.
+The final scalar Ball, specialized functional BL, Fourier product, and classical
+cube upper/equality statements are unconditional. The reduction theorems retain
+their explicit analytic hypotheses. -/
+
+#print axioms CubeSections.classicalBlock_classification_of_zeroAngular
+#print axioms CubeSections.sincProduct_eq_iff
+#print axioms CubeSections.integrable_ballSincIntegrand
+#print axioms CubeSections.ballSincIntegral_pos_of_two_le
+#print axioms CubeSections.charFun_unitIntervalMeasure_two_pi
+#print axioms CubeSections.cubeUniformMeasure_eq_restrict
+#print axioms CubeSections.charFun_projectedCube_neg_two_pi
+#print axioms CubeSections.fourier_cube_density_eq_sinc
+#print axioms CubeSections.cube_density_zero_eq_sincIntegral
+#print axioms CubeSections.sectionVolume_eq_complementarySincIntegral
+#print axioms CubeSections.classicalFourierProductBound_of_sincBrascampLieb
+#print axioms CubeSections.classical_codimension_bound_of_sinc_inputs
+#print axioms CubeSections.classical_equality_iff_of_sinc_inputs
+#print axioms CubeSections.ballSincIntegral_two
+#print axioms CubeSections.strictBallSincBound_of_interior
+#print axioms CubeSections.classical_codimension_bound_of_interior_and_sincBL
+#print axioms CubeSections.finiteHolder_nonnegative
+#print axioms CubeSections.sincBrascampLieb_line
+#print axioms CubeSections.nonnegativeFunctionalBL_of_positive
+#print axioms CubeSections.sincBrascampLieb_of_positiveFunctionalBL
+#print axioms CubeSections.sincBrascampLieb
+#print axioms CubeSections.classicalFourierProductBound
+#print axioms CubeSections.classical_codimension_bound_of_ball
+#print axioms CubeSections.classical_equality_iff_of_ball
+#print axioms CubeSections.maximalSection_classical_of_interior
+
+#print axioms CubeSections.ballSincIntegral_four
+#print axioms CubeSections.integral_sinc_cube
+#print axioms CubeSections.sinc_negative_cube_halfline_bound
+#print axioms CubeSections.ballSincIntegral_three_lt_seven_ninths
+#print axioms CubeSections.ballSincIntegral_lt_sharp_of_four_le
+#print axioms CubeSections.ballSincStrictInterior
+#print axioms CubeSections.strictBallSincBound
+#print axioms CubeSections.classical_codimension_bound
+#print axioms CubeSections.classical_equality_iff
+#print axioms CubeSections.maximalSection_classical

@@ -1,0 +1,416 @@
+{
+  "status": "PASS_EXPORTED_BODY_DEPENDENCY_GRAPH",
+  "not_a_typechecker": true,
+  "metadata": {
+    "exporter": {
+      "name": "lean4export",
+      "version": "3.1.0"
+    },
+    "format": {
+      "version": "3.1.0"
+    },
+    "lean": {
+      "githash": "0b77e12952ad39077d80d8bd6b66d601f225c321",
+      "version": "4.37.0-rc1"
+    }
+  },
+  "export_sha256": "0b089a53d0dd038b966532d29f072a4a3928229cd112fa619fb2efb880e2b96a",
+  "export_bytes": 999902425,
+  "line_count": 19023591,
+  "expression_count": 18514315,
+  "declaration_count": 87154,
+  "per_target": [
+    {
+      "targets": [
+        "CubeSections.maximalSectionVolume"
+      ],
+      "reachable_declarations": 87153,
+      "reachable_expressions": 18514309,
+      "declaration_kinds": {
+        "axiom": 3,
+        "ctor": 1183,
+        "def": 26036,
+        "induct": 1078,
+        "opaque": 2,
+        "quot": 4,
+        "rec": 1080,
+        "thm": 57767
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "unapproved_axioms": [],
+      "unsafe_or_partial": []
+    },
+    {
+      "targets": [
+        "CubeSections.balancedSectionAttains"
+      ],
+      "reachable_declarations": 37787,
+      "reachable_expressions": 3599337,
+      "declaration_kinds": {
+        "axiom": 3,
+        "ctor": 952,
+        "def": 8071,
+        "induct": 866,
+        "opaque": 2,
+        "quot": 4,
+        "rec": 868,
+        "thm": 27021
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "unapproved_axioms": [],
+      "unsafe_or_partial": []
+    },
+    {
+      "targets": [
+        "CubeSections.maximalSectionVolume_eq_iff"
+      ],
+      "reachable_declarations": 87153,
+      "reachable_expressions": 18514312,
+      "declaration_kinds": {
+        "axiom": 3,
+        "ctor": 1183,
+        "def": 26036,
+        "induct": 1078,
+        "opaque": 2,
+        "quot": 4,
+        "rec": 1080,
+        "thm": 57767
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "unapproved_axioms": [],
+      "unsafe_or_partial": []
+    },
+    {
+      "targets": [
+        "CubeSections.maximalSections_main"
+      ],
+      "reachable_declarations": 87152,
+      "reachable_expressions": 18514305,
+      "declaration_kinds": {
+        "axiom": 3,
+        "ctor": 1183,
+        "def": 26036,
+        "induct": 1078,
+        "opaque": 2,
+        "quot": 4,
+        "rec": 1080,
+        "thm": 57766
+      },
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "unapproved_axioms": [],
+      "unsafe_or_partial": []
+    }
+  ],
+  "union": {
+    "targets": [
+      "CubeSections.maximalSectionVolume",
+      "CubeSections.balancedSectionAttains",
+      "CubeSections.maximalSectionVolume_eq_iff",
+      "CubeSections.maximalSections_main"
+    ],
+    "reachable_declarations": 87154,
+    "reachable_expressions": 18514315,
+    "declaration_kinds": {
+      "axiom": 3,
+      "ctor": 1183,
+      "def": 26036,
+      "induct": 1078,
+      "opaque": 2,
+      "quot": 4,
+      "rec": 1080,
+      "thm": 57768
+    },
+    "axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "unapproved_axioms": [],
+    "unsafe_or_partial": []
+  },
+  "axiom_signatures": {
+    "Classical.choice": {
+      "record": {
+        "isUnsafe": false,
+        "levelParams": [
+          6
+        ],
+        "name": 3118,
+        "type": 17983
+      },
+      "type": "(forall x0 : Sort(u), (forall x1 : (Nonempty.{u} x0), x0))"
+    },
+    "Quot.sound": {
+      "record": {
+        "isUnsafe": false,
+        "levelParams": [
+          6
+        ],
+        "name": 3220,
+        "type": 18733
+      },
+      "type": "(forall x0 : Sort(u), (forall x1 : (forall x1 : x0, (forall x2 : x0, Prop)), (forall x2 : x0, (forall x3 : x0, (forall x4 : ((x1 x2) x3), (((Eq.{u} ((Quot.{u} x0) x1)) (((Quot.mk.{u} x0) x1) x2)) (((Quot.mk.{u} x0) x1) x3)))))))"
+    },
+    "propext": {
+      "record": {
+        "isUnsafe": false,
+        "levelParams": [],
+        "name": 2819,
+        "type": 16227
+      },
+      "type": "(forall x0 : Prop, (forall x1 : Prop, (forall x2 : ((Iff x0) x1), (((Eq.{(0+1)} Prop) x0) x1))))"
+    }
+  },
+  "details": {
+    "CubeSections.maximalSectionVolume": {
+      "kind": "thm",
+      "record": {
+        "all": [
+          421131
+        ],
+        "levelParams": [],
+        "name": 421131,
+        "type": 2790377,
+        "value": 18514308
+      },
+      "type": "CubeSections.UpperBoundStatement"
+    },
+    "CubeSections.balancedSectionAttains": {
+      "kind": "thm",
+      "record": {
+        "all": [
+          417215
+        ],
+        "levelParams": [],
+        "name": 417215,
+        "type": 2790381,
+        "value": 18353236
+      },
+      "type": "CubeSections.AttainmentStatement"
+    },
+    "CubeSections.maximalSectionVolume_eq_iff": {
+      "kind": "thm",
+      "record": {
+        "all": [
+          421132
+        ],
+        "levelParams": [],
+        "name": 421132,
+        "type": 2790379,
+        "value": 18514314
+      },
+      "type": "CubeSections.EqualityStatement"
+    },
+    "CubeSections.maximalSections_main": {
+      "kind": "thm",
+      "record": {
+        "all": [
+          421130
+        ],
+        "levelParams": [],
+        "name": 421130,
+        "type": 18353237,
+        "value": 18514304
+      },
+      "type": "CubeSections.MainStatement"
+    },
+    "CubeSections.UpperBoundStatement": {
+      "kind": "def",
+      "record": {
+        "all": [
+          179725
+        ],
+        "hints": {
+          "regular": 47
+        },
+        "levelParams": [],
+        "name": 179725,
+        "safety": "safe",
+        "type": 38,
+        "value": 2790121
+      },
+      "type": "Prop",
+      "definition": "(forall x0 : Nat, (forall x1 : Nat, (forall x2 : ((((LE.le.{0} Nat) instLENat) (((OfNat.ofNat.{0} Nat) \"1\") (instOfNatNat \"1\"))) x1), (forall x3 : ((((LE.le.{0} Nat) instLENat) x1) x0), (forall x4 : ((CubeSections.Frame x0) x1), ((((LE.le.{0} Real) Real.instLE) (((CubeSections.sectionVolume x0) x1) x4)) ((CubeSections.sharpValue x0) x1)))))))"
+    },
+    "CubeSections.EqualityStatement": {
+      "kind": "def",
+      "record": {
+        "all": [
+          179739
+        ],
+        "hints": {
+          "regular": 47
+        },
+        "levelParams": [],
+        "name": 179739,
+        "safety": "safe",
+        "type": 38,
+        "value": 2790367
+      },
+      "type": "Prop",
+      "definition": "(forall x0 : Nat, (forall x1 : Nat, (forall x2 : ((((LE.le.{0} Nat) instLENat) (((OfNat.ofNat.{0} Nat) \"1\") (instOfNatNat \"1\"))) x1), (forall x3 : ((((LE.le.{0} Nat) instLENat) x1) x0), (forall x4 : ((CubeSections.Frame x0) x1), ((Iff (((Eq.{(0+1)} Real) (((CubeSections.sectionVolume x0) x1) x4)) ((CubeSections.sharpValue x0) x1))) (((CubeSections.IsBalancedSection x0) x1) x4)))))))"
+    },
+    "CubeSections.AttainmentStatement": {
+      "kind": "def",
+      "record": {
+        "all": [
+          179740
+        ],
+        "hints": {
+          "regular": 47
+        },
+        "levelParams": [],
+        "name": 179740,
+        "safety": "safe",
+        "type": 38,
+        "value": 2790376
+      },
+      "type": "Prop",
+      "definition": "(forall x0 : Nat, (forall x1 : Nat, (forall x2 : ((((LE.le.{0} Nat) instLENat) (((OfNat.ofNat.{0} Nat) \"1\") (instOfNatNat \"1\"))) x1), (forall x3 : ((((LE.le.{0} Nat) instLENat) x1) x0), ((Exists.{(0+1)} ((CubeSections.Frame x0) x1)) (fun x4 : ((CubeSections.Frame x0) x1), ((And (((CubeSections.IsBalancedSection x0) x1) x4)) (((Eq.{(0+1)} Real) (((CubeSections.sectionVolume x0) x1) x4)) ((CubeSections.sharpValue x0) x1)))))))))"
+    },
+    "CubeSections.MainStatement": {
+      "kind": "def",
+      "record": {
+        "all": [
+          179741
+        ],
+        "hints": {
+          "regular": 48
+        },
+        "levelParams": [],
+        "name": 179741,
+        "safety": "safe",
+        "type": 38,
+        "value": 2790383
+      },
+      "type": "Prop",
+      "definition": "((And CubeSections.UpperBoundStatement) ((And CubeSections.EqualityStatement) CubeSections.AttainmentStatement))"
+    },
+    "CubeSections.cube": {
+      "kind": "def",
+      "record": {
+        "all": [
+          179721
+        ],
+        "hints": {
+          "regular": 30
+        },
+        "levelParams": [],
+        "name": 179721,
+        "safety": "safe",
+        "type": 2789935,
+        "value": 2789967
+      },
+      "type": "(forall x0 : Nat, (Set.{0} (CubeSections.E x0)))",
+      "definition": "(fun x0 : Nat, ((Set.ofPred.{0} (CubeSections.E x0)) (fun x1 : (CubeSections.E x0), (forall x2 : (Fin x0), ((((LE.le.{0} ((fun x3 : (Fin x0), Real) x2)) Real.instLE) ((((abs.{0} ((fun x3 : (Fin x0), Real) x2)) Real.lattice) Real.instAddGroup) ((((WithLp.ofLp.{0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) (forall x3 : (Fin x0), ((fun x4 : (Fin x0), Real) x3))) x1) x2))) ((((((HDiv.hDiv.{0,0,0} Real) ((fun x3 : (Fin x0), Real) x2)) Real) ((instHDiv.{0} Real) ((DivInvMonoid.toDiv.{0} Real) Real.instDivInvMonoid))) (((OfNat.ofNat.{0} Real) \"1\") ((One.toOfNat1.{0} Real) Real.instOne))) (((OfNat.ofNat.{0} ((fun x3 : (Fin x0), Real) x2)) \"2\") ((((instOfNatAtLeastTwo.{0} ((fun x3 : (Fin x0), Real) x2)) \"2\") Real.instNatCast) CubeSections.cube._proof_1))))))))"
+    },
+    "CubeSections.sectionMass": {
+      "kind": "def",
+      "record": {
+        "all": [
+          177585
+        ],
+        "hints": {
+          "regular": 45
+        },
+        "levelParams": [],
+        "name": 177585,
+        "safety": "safe",
+        "type": 2789973,
+        "value": 2790081
+      },
+      "type": "(forall x0 : Nat, (forall x1 : Nat, (forall x2 : ((CubeSections.Frame x0) x1), ENNReal)))",
+      "definition": "(fun x0 : Nat, (fun x1 : Nat, (fun x2 : ((CubeSections.Frame x0) x1), ((((((DFunLike.coe.{(0+1),(0+1),(0+1)} ((MeasureTheory.Measure.{0} (CubeSections.E x1)) ((MeasureTheory.MeasureSpace.toMeasurableSpace.{0} (CubeSections.E x1)) ((((((measureSpaceOfInnerProductSpace.{0} (CubeSections.E x1)) ((((((PiLp.normedAddCommGroup.{0,0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) (Fin x1)) (fun x3 : (Fin x1), Real)) fact_one_le_two_ennreal) (Fin.fintype x1)) (fun x3 : (Fin x1), Real.normedAddCommGroup))) (((((((PiLp.innerProductSpace.{0,0,0} Real) Real.instRCLike) (Fin x1)) (Fin.fintype x1)) (fun x3 : (Fin x1), Real)) (fun x3 : (Fin x1), Real.normedAddCommGroup)) (fun x3 : (Fin x1), ((RCLike.toInnerProductSpaceReal.{0} Real) Real.instRCLike)))) (CubeSections.sectionMass._proof_1 x1)) (((WithLp.measurableSpace.{0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) (forall x3 : (Fin x1), ((fun x4 : (Fin x1), Real) x3))) (((MeasurableSpace.pi.{0,0} (Fin x1)) (fun x3 : (Fin x1), Real)) (fun x3 : (Fin x1), Real.measurableSpace)))) (CubeSections.sectionMass._proof_2 x1))))) (Set.{0} (CubeSections.E x1))) (fun x3 : (Set.{0} (CubeSections.E x1)), ENNReal)) ((MeasureTheory.Measure.instFunLike.{0} (CubeSections.E x1)) ((MeasureTheory.MeasureSpace.toMeasurableSpace.{0} (CubeSections.E x1)) ((((((measureSpaceOfInnerProductSpace.{0} (CubeSections.E x1)) ((((((PiLp.normedAddCommGroup.{0,0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) (Fin x1)) (fun x3 : (Fin x1), Real)) fact_one_le_two_ennreal) (Fin.fintype x1)) (fun x3 : (Fin x1), Real.normedAddCommGroup))) (((((((PiLp.innerProductSpace.{0,0,0} Real) Real.instRCLike) (Fin x1)) (Fin.fintype x1)) (fun x3 : (Fin x1), Real)) (fun x3 : (Fin x1), Real.normedAddCommGroup)) (fun x3 : (Fin x1), ((RCLike.toInnerProductSpaceReal.{0} Real) Real.instRCLike)))) (CubeSections.sectionMass._proof_1 x1)) (((WithLp.measurableSpace.{0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) (forall x3 : (Fin x1), ((fun x4 : (Fin x1), Real) x3))) (((MeasurableSpace.pi.{0,0} (Fin x1)) (fun x3 : (Fin x1), Real)) (fun x3 : (Fin x1), Real.measurableSpace)))) (CubeSections.sectionMass._proof_2 x1))))) ((MeasureTheory.MeasureSpace.volume.{0} (CubeSections.E x1)) ((((((measureSpaceOfInnerProductSpace.{0} (CubeSections.E x1)) ((((((PiLp.normedAddCommGroup.{0,0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) (Fin x1)) (fun x3 : (Fin x1), Real)) fact_one_le_two_ennreal) (Fin.fintype x1)) (fun x3 : (Fin x1), Real.normedAddCommGroup))) (((((((PiLp.innerProductSpace.{0,0,0} Real) Real.instRCLike) (Fin x1)) (Fin.fintype x1)) (fun x3 : (Fin x1), Real)) (fun x3 : (Fin x1), Real.normedAddCommGroup)) (fun x3 : (Fin x1), ((RCLike.toInnerProductSpaceReal.{0} Real) Real.instRCLike)))) (CubeSections.sectionMass._proof_1 x1)) (((WithLp.measurableSpace.{0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) (forall x3 : (Fin x1), ((fun x4 : (Fin x1), Real) x3))) (((MeasurableSpace.pi.{0,0} (Fin x1)) (fun x3 : (Fin x1), Real)) (fun x3 : (Fin x1), Real.measurableSpace)))) (CubeSections.sectionMass._proof_2 x1)))) ((((Set.preimage.{0,0} (CubeSections.E x1)) (CubeSections.E x0)) (((((DFunLike.coe.{(0+1),(0+1),(0+1)} ((CubeSections.Frame x0) x1)) (CubeSections.E x1)) (fun x3 : (CubeSections.E x1), (CubeSections.E x0))) (((((((((((LinearIsometry.instFunLike.{0,0,0,0} Real) Real) (CubeSections.E x1)) (CubeSections.E x0)) Real.semiring) Real.semiring) ((RingHom.id.{0} Real) ((Semiring.toNonAssocSemiring.{0} Real) Real.semiring))) ((((((PiLp.seminormedAddCommGroup.{0,0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) (Fin x1)) (fun x3 : (Fin x1), Real)) fact_one_le_two_ennreal) (Fin.fintype x1)) (fun x3 : (Fin x1), ((NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real) ((NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real) ((SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real) ((NormedCommRing.toSeminormedCommRing.{0} Real) Real.normedCommRing))))))) ((((((PiLp.seminormedAddCommGroup.{0,0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) (Fin x0)) (fun x3 : (Fin x0), Real)) fact_one_le_two_ennreal) (Fin.fintype x0)) (fun x3 : (Fin x0), ((NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real) ((NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real) ((SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real) ((NormedCommRing.toSeminormedCommRing.{0} Real) Real.normedCommRing))))))) ((((((WithLp.instModule.{0,0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) Real) (forall x3 : (Fin x1), ((fun x4 : (Fin x1), Real) x3))) Real.semiring) (((Pi.addCommGroup.{0,0} (Fin x1)) (fun x3 : (Fin x1), Real)) (fun x3 : (Fin x1), ((SeminormedAddCommGroup.toAddCommGroup.{0} ((fun x4 : (Fin x1), Real) x3)) ((fun x4 : (Fin x1), ((NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real) ((NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real) ((SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real) ((NormedCommRing.toSeminormedCommRing.{0} Real) Real.normedCommRing))))) x3))))) ((((((Pi.Function.module.{0,0,0} (Fin x1)) Real) Real) Real.semiring) ((Semiring.toAddCommMonoid.{0} Real) ((Ring.toSemiring.{0} Real) ((SeminormedRing.toRing.{0} Real) ((SeminormedCommRing.toSeminormedRing.{0} Real) ((NormedCommRing.toSeminormedCommRing.{0} Real) Real.normedCommRing)))))) ((Semiring.toModule.{0} Real) Real.semiring)))) ((((((WithLp.instModule.{0,0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) Real) (forall x3 : (Fin x0), ((fun x4 : (Fin x0), Real) x3))) Real.semiring) (((Pi.addCommGroup.{0,0} (Fin x0)) (fun x3 : (Fin x0), Real)) (fun x3 : (Fin x0), ((SeminormedAddCommGroup.toAddCommGroup.{0} ((fun x4 : (Fin x0), Real) x3)) ((fun x4 : (Fin x0), ((NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real) ((NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real) ((SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real) ((NormedCommRing.toSeminormedCommRing.{0} Real) Real.normedCommRing))))) x3))))) ((((((Pi.Function.module.{0,0,0} (Fin x0)) Real) Real) Real.semiring) ((Semiring.toAddCommMonoid.{0} Real) ((Ring.toSemiring.{0} Real) ((SeminormedRing.toRing.{0} Real) ((SeminormedCommRing.toSeminormedRing.{0} Real) ((NormedCommRing.toSeminormedCommRing.{0} Real) Real.normedCommRing)))))) ((Semiring.toModule.{0} Real) Real.semiring))))) x2)) (CubeSections.cube x0))))))"
+    },
+    "CubeSections.sectionVolume": {
+      "kind": "def",
+      "record": {
+        "all": [
+          179723
+        ],
+        "hints": {
+          "regular": 46
+        },
+        "levelParams": [],
+        "name": 179723,
+        "safety": "safe",
+        "type": 2790084,
+        "value": 2790092
+      },
+      "type": "(forall x0 : Nat, (forall x1 : Nat, (forall x2 : ((CubeSections.Frame x0) x1), Real)))",
+      "definition": "(fun x0 : Nat, (fun x1 : Nat, (fun x2 : ((CubeSections.Frame x0) x1), (ENNReal.toReal (((CubeSections.sectionMass x0) x1) x2)))))"
+    },
+    "CubeSections.sharpValue": {
+      "kind": "def",
+      "record": {
+        "all": [
+          179724
+        ],
+        "hints": {
+          "regular": 30
+        },
+        "levelParams": [],
+        "name": 179724,
+        "safety": "safe",
+        "type": 2790093,
+        "value": 2790105
+      },
+      "type": "(forall x0 : Nat, (forall x1 : Nat, Real))",
+      "definition": "(fun x0 : Nat, (fun x1 : Nat, (Real.sqrt (((Nat.cast.{0} Real) Real.instNatCast) ((((((HMul.hMul.{0,0,0} Nat) Nat) Nat) ((instHMul.{0} Nat) instMulNat)) ((((((HPow.hPow.{0,0,0} Nat) Nat) Nat) (((instHPow.{0,0} Nat) Nat) ((NPow.toPow.{0} Nat) ((Monoid.toNPow.{0} Nat) Nat.instMonoid)))) ((((((HDiv.hDiv.{0,0,0} Nat) Nat) Nat) ((instHDiv.{0} Nat) Nat.instDiv)) x0) x1)) ((((((HSub.hSub.{0,0,0} Nat) Nat) Nat) ((instHSub.{0} Nat) instSubNat)) x1) ((((((HMod.hMod.{0,0,0} Nat) Nat) Nat) ((instHMod.{0} Nat) Nat.instMod)) x0) x1)))) ((((((HPow.hPow.{0,0,0} Nat) Nat) Nat) (((instHPow.{0,0} Nat) Nat) ((NPow.toPow.{0} Nat) ((Monoid.toNPow.{0} Nat) Nat.instMonoid)))) ((((((HAdd.hAdd.{0,0,0} Nat) Nat) Nat) ((instHAdd.{0} Nat) instAddNat)) ((((((HDiv.hDiv.{0,0,0} Nat) Nat) Nat) ((instHDiv.{0} Nat) Nat.instDiv)) x0) x1)) (((OfNat.ofNat.{0} Nat) \"1\") (instOfNatNat \"1\")))) ((((((HMod.hMod.{0,0,0} Nat) Nat) Nat) ((instHMod.{0} Nat) Nat.instMod)) x0) x1)))))))"
+    },
+    "CubeSections.IsBalancedSection": {
+      "kind": "def",
+      "record": {
+        "all": [
+          179738
+        ],
+        "hints": {
+          "regular": 43
+        },
+        "levelParams": [],
+        "name": 179738,
+        "safety": "safe",
+        "type": 2790289,
+        "value": 2790354
+      },
+      "type": "(forall x0 : Nat, (forall x1 : Nat, (forall x2 : ((CubeSections.Frame x0) x1), Prop)))",
+      "definition": "(fun x0 : Nat, (fun x1 : Nat, (fun x2 : ((CubeSections.Frame x0) x1), ((Exists.{(0+1)} ((CubeSections.BlockData x0) x1)) (fun x3 : ((CubeSections.BlockData x0) x1), ((And (((CubeSections.BlockData.IsBalanced x0) x1) x3)) (((Eq.{(0+1)} (Set.{0} (CubeSections.E x0))) (((Set.range.{0,(0+1)} (CubeSections.E x0)) (CubeSections.E x1)) (((((DFunLike.coe.{(0+1),(0+1),(0+1)} ((CubeSections.Frame x0) x1)) (CubeSections.E x1)) (fun x4 : (CubeSections.E x1), (CubeSections.E x0))) (((((((((((LinearIsometry.instFunLike.{0,0,0,0} Real) Real) (CubeSections.E x1)) (CubeSections.E x0)) Real.semiring) Real.semiring) ((RingHom.id.{0} Real) ((Semiring.toNonAssocSemiring.{0} Real) Real.semiring))) ((((((PiLp.seminormedAddCommGroup.{0,0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) (Fin x1)) (fun x4 : (Fin x1), Real)) fact_one_le_two_ennreal) (Fin.fintype x1)) (fun x4 : (Fin x1), ((NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real) ((NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real) ((SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real) ((NormedCommRing.toSeminormedCommRing.{0} Real) Real.normedCommRing))))))) ((((((PiLp.seminormedAddCommGroup.{0,0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) (Fin x0)) (fun x4 : (Fin x0), Real)) fact_one_le_two_ennreal) (Fin.fintype x0)) (fun x4 : (Fin x0), ((NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real) ((NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real) ((SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real) ((NormedCommRing.toSeminormedCommRing.{0} Real) Real.normedCommRing))))))) ((((((WithLp.instModule.{0,0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) Real) (forall x4 : (Fin x1), ((fun x5 : (Fin x1), Real) x4))) Real.semiring) (((Pi.addCommGroup.{0,0} (Fin x1)) (fun x4 : (Fin x1), Real)) (fun x4 : (Fin x1), ((SeminormedAddCommGroup.toAddCommGroup.{0} ((fun x5 : (Fin x1), Real) x4)) ((fun x5 : (Fin x1), ((NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real) ((NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real) ((SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real) ((NormedCommRing.toSeminormedCommRing.{0} Real) Real.normedCommRing))))) x4))))) ((((((Pi.Function.module.{0,0,0} (Fin x1)) Real) Real) Real.semiring) ((Semiring.toAddCommMonoid.{0} Real) ((Ring.toSemiring.{0} Real) ((SeminormedRing.toRing.{0} Real) ((SeminormedCommRing.toSeminormedRing.{0} Real) ((NormedCommRing.toSeminormedCommRing.{0} Real) Real.normedCommRing)))))) ((Semiring.toModule.{0} Real) Real.semiring)))) ((((((WithLp.instModule.{0,0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) Real) (forall x4 : (Fin x0), ((fun x5 : (Fin x0), Real) x4))) Real.semiring) (((Pi.addCommGroup.{0,0} (Fin x0)) (fun x4 : (Fin x0), Real)) (fun x4 : (Fin x0), ((SeminormedAddCommGroup.toAddCommGroup.{0} ((fun x5 : (Fin x0), Real) x4)) ((fun x5 : (Fin x0), ((NonUnitalSeminormedRing.toSeminormedAddCommGroup.{0} Real) ((NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing.{0} Real) ((SeminormedCommRing.toNonUnitalSeminormedCommRing.{0} Real) ((NormedCommRing.toSeminormedCommRing.{0} Real) Real.normedCommRing))))) x4))))) ((((((Pi.Function.module.{0,0,0} (Fin x0)) Real) Real) Real.semiring) ((Semiring.toAddCommMonoid.{0} Real) ((Ring.toSemiring.{0} Real) ((SeminormedRing.toRing.{0} Real) ((SeminormedCommRing.toSeminormedRing.{0} Real) ((NormedCommRing.toSeminormedCommRing.{0} Real) Real.normedCommRing)))))) ((Semiring.toModule.{0} Real) Real.semiring))))) x2))) (((CubeSections.BlockData.plane x0) x1) x3))))))))"
+    },
+    "CubeSections.BlockData.plane": {
+      "kind": "def",
+      "record": {
+        "all": [
+          179737
+        ],
+        "hints": {
+          "regular": 30
+        },
+        "levelParams": [],
+        "name": 179737,
+        "safety": "safe",
+        "type": 2790253,
+        "value": 2790286
+      },
+      "type": "(forall x0 : Nat, (forall x1 : Nat, (forall x2 : ((CubeSections.BlockData x0) x1), (Set.{0} (CubeSections.E x0)))))",
+      "definition": "(fun x0 : Nat, (fun x1 : Nat, (fun x2 : ((CubeSections.BlockData x0) x1), ((Set.ofPred.{0} (CubeSections.E x0)) (fun x3 : (CubeSections.E x0), ((Exists.{(0+1)} (forall x4 : (Fin x1), Real)) (fun x4 : (forall x4 : (Fin x1), Real), (forall x5 : (Fin x0), (((Eq.{(0+1)} ((fun x6 : (Fin x0), Real) x5)) ((((WithLp.ofLp.{0} (((OfNat.ofNat.{0} ENNReal) \"2\") ((((instOfNatAtLeastTwo.{0} ENNReal) \"2\") ((AddMonoidWithOne.toNatCast.{0} ENNReal) ((AddCommMonoidWithOne.toAddMonoidWithOne.{0} ENNReal) ENNReal.instAddCommMonoidWithOne))) PiLp.innerProductSpace._proof_1))) (forall x6 : (Fin x0), ((fun x7 : (Fin x0), Real) x6))) x3) x5)) ((((((HMul.hMul.{0,0,0} Real) Real) Real) ((instHMul.{0} Real) Real.instMul)) ((((CubeSections.BlockData.sign x0) x1) x2) x5)) (x4 ((((CubeSections.BlockData.block x0) x1) x2) x5))))))))))))"
+    }
+  },
+  "note": "Traversal uses actual exported type/value expressions and inductive constructor/recursor rules. No #print axioms or cached axiom summary is an input. Inductive blocks are conservatively included in full. Axiom names are allowed here; their displayed signatures must also be reviewed.",
+  "generated_export": "targets.ndjson; regenerated locally, not distributed"
+}

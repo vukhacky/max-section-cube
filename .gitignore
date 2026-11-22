@@ -1,0 +1,33 @@
+# Build products
+lean/.lake/
+lean/.audit/
+lean/build/
+build/
+dist/
+*.olean
+*.ilean
+*.trace
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Recreated verification output
+verification/runs/
+computation/output/
+computation/.cache/
+
+# LaTeX build products
+manuscript/*.aux
+manuscript/*.log
+manuscript/*.out
+manuscript/*.toc
+manuscript/*.fls
+manuscript/*.fdb_latexmk
+manuscript/*.synctex.gz
+manuscript/*.pdf
+
+# Editor files
+.DS_Store
+*~
+*.swp

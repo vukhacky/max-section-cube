@@ -1,0 +1,156 @@
+import CubeSections.Analysis.ScalarProduction
+import CubeSections.Analysis.EntropyEnvelope
+import CubeSections.LinearAlgebra.Projection
+import CubeSections.LinearAlgebra.RankUpdate
+import CubeSections.LinearAlgebra.Variance
+import CubeSections.Analysis.GaussianScore
+import CubeSections.Analysis.SharpEntropy
+
+import CubeSections.Analysis.GaussianTest
+import CubeSections.Analysis.FrameGaussian
+import CubeSections.Analysis.CouplingLift
+import CubeSections.Analysis.AmplitudeContraction
+import CubeSections.Analysis.PotentialAmplitude
+import CubeSections.Analysis.GlobalTransportEnergy
+import CubeSections.Analysis.ProductionEnergyBridge
+import CubeSections.Analysis.FrameQuantileRegularity
+import CubeSections.Analysis.SlabEnergyFromCost
+import CubeSections.Analysis.ZeroDeficitCoupling
+import CubeSections.Analysis.CompactGaussianTalagrand
+import CubeSections.Analysis.GaussianSteinGeneral
+import CubeSections.Analysis.PositiveDensityTransport
+import CubeSections.Analysis.FunctionalChangeVariables
+import CubeSections.Analysis.PositiveDensityInverse
+import CubeSections.Analysis.SincGaussianEnvelope
+import CubeSections.Analysis.SincFirstLobe
+import CubeSections.Analysis.CompactGaussianApprox
+
+#print axioms CubeSections.scalar_production
+#print axioms CubeSections.exponential_score_difference
+#print axioms CubeSections.exponential_pair_production
+#print axioms CubeSections.entropyExcess_le_curvatureEnvelope
+#print axioms CubeSections.frameMatrix_transpose_mul
+#print axioms CubeSections.gramProjection_mul_self
+#print axioms CubeSections.gramProjection_row_sq_sum
+#print axioms CubeSections.leverage_le_one
+#print axioms CubeSections.sum_leverage
+#print axioms CubeSections.gramProjection_offdiag_sq_sum
+#print axioms CubeSections.symmetricProjection_complement_entry_sq_le
+#print axioms CubeSections.gramProjection_complement_entry_sq_le
+#print axioms CubeSections.unit_leverage_offdiag_zero
+#print axioms CubeSections.zero_leverage_row_zero
+
+#print axioms CubeSections.det_one_add_two_scaled_outer
+#print axioms CubeSections.det_two_row_merge
+#print axioms CubeSections.leverage_gap_of_rowReplacement_det_le
+#print axioms CubeSections.gaussianScore_difference_sq_le
+#print axioms CubeSections.scaledGaussianScore_difference_sq_le
+#print axioms CubeSections.entropyExcess_lt_sharpQuadratic
+#print axioms CubeSections.entropyExcess_le_sharpQuadratic
+#print axioms CubeSections.sharpEntropyCoeff_pos
+#print axioms CubeSections.sharpEntropyCoeff_lt
+
+#print axioms CubeSections.entropyExcess_nonneg
+#print axioms CubeSections.gramVariance_identity
+#print axioms CubeSections.gramVariance_le
+
+#print axioms CubeSections.integral_exp_quadratic
+#print axioms CubeSections.integral_standardGaussian_quadratic
+#print axioms CubeSections.integral_gaussianScore_sq
+#print axioms CubeSections.integral_gaussianScore_pair
+#print axioms CubeSections.map_gaussianProjectionPair
+#print axioms CubeSections.integral_gaussianScore_inner_mul
+#print axioms CubeSections.gaussianPairCost_lower
+#print axioms CubeSections.global_gaussian_constant_le_twenty
+#print axioms CubeSections.potential_pair_transfer_bound
+#print axioms CubeSections.integral_potentialPairEnergy_lower
+#print axioms CubeSections.integral_unitRows_score_mul
+#print axioms CubeSections.frame_coupling_lift_identity
+#print axioms CubeSections.integral_frame_coupling_lift_le
+#print axioms CubeSections.amplitudeVariance_le
+#print axioms CubeSections.global_score_transfer
+#print axioms CubeSections.potential_score_transfer
+#print axioms CubeSections.frame_gaussian_energy_lower
+#print axioms CubeSections.frame_angular_bound_of_energy
+#print axioms CubeSections.frame_angular_bound_twenty_of_energy
+
+#print axioms CubeSections.liftedScores_distance_sq
+#print axioms CubeSections.integral_frameTransportEnergy_le
+#print axioms CubeSections.frame_angular_bound_twenty_of_entropy_decomposition
+#print axioms CubeSections.monotone_of_hasDerivAt_nonneg_off_finset
+#print axioms CubeSections.hasDerivAt_determinantRemainder
+#print axioms CubeSections.hasDerivAt_clipped_determinantRemainder
+#print axioms CubeSections.hasDerivAt_clipped_gramPairProduction
+#print axioms CubeSections.clipped_remainder_difference_monotone
+#print axioms CubeSections.gramPairProduction_le_determinantRemainder
+#print axioms CubeSections.exponential_determinant_production
+#print axioms CubeSections.integrable_frameScoreProduction_of_determinant
+#print axioms CubeSections.frame_angular_bound_twenty_of_determinant_transport
+
+#print axioms CubeSections.hasDerivAt_standardGaussianCDF
+#print axioms CubeSections.standardGaussianCDF_surjOn
+#print axioms CubeSections.hasDerivAt_standardGaussianQuantile
+#print axioms CubeSections.hasDerivAt_intervalGaussianTransport
+#print axioms CubeSections.contDiffOn_intervalGaussianTransport
+#print axioms CubeSections.contDiffOn_frameGaussianTransport
+#print axioms CubeSections.frameGaussianTransport_injOn
+#print axioms CubeSections.frameGaussianTransport_jacobian_posDef
+#print axioms CubeSections.frameGaussianTransport_map_jacobian
+#print axioms CubeSections.frameGaussianTransport_integral_image
+#print axioms CubeSections.integral_intervalGaussianTransport_sq
+#print axioms CubeSections.integrable_frameQuantileCoordinate_sq
+#print axioms CubeSections.integrable_frameGaussianTransport_sq
+#print axioms CubeSections.integrable_frameQuantile_residual_sq
+#print axioms CubeSections.frameSlabUniform_isProbabilityMeasure
+#print axioms CubeSections.frameGaussianInverse_transport
+#print axioms CubeSections.frameTransportedLaw_eq_withDensity
+#print axioms CubeSections.frameTransportedLaw_eq_gaussian_withDensity
+#print axioms CubeSections.frameTransport_llr_comp
+#print axioms CubeSections.integrable_frameTransportLogProduction
+#print axioms CubeSections.frameTransport_klDiv_ne_top
+#print axioms CubeSections.frameTransport_entropy_decomposition
+#print axioms CubeSections.frameGaussianInverse_map_law
+#print axioms CubeSections.framePullbackCoupling_cost
+#print axioms CubeSections.integrable_framePullbackCoupling_cost
+#print axioms CubeSections.actual_slab_energy_of_output_cost
+#print axioms CubeSections.slabGaussianEnergy_of_gaussianQuadraticCost
+#print axioms CubeSections.frameTransportedLaw_eq_gaussian_of_deficit_zero
+#print axioms CubeSections.slab_energy_of_zero_deficit
+#print axioms CubeSections.gramAngularDefect_eq_zero_of_frameSlabDeficit_zero
+#print axioms CubeSections.gramAngularDefect_eq_zero_of_slabDeficit_zero
+#print axioms CubeSections.gaussian_stein_compact
+#print axioms CubeSections.CompactGaussianPerturbation.map_jacobian
+#print axioms CubeSections.CompactGaussianPerturbation.law_eq_gaussian_withDensity
+#print axioms CubeSections.CompactGaussianPerturbation.memLp_id_law_two
+#print axioms CubeSections.CompactGaussianPerturbation.klDiv_finite
+#print axioms CubeSections.CompactGaussianPerturbation.klDiv_decomposition
+#print axioms CubeSections.CompactGaussianPerturbation.quadratic_transport
+#print axioms CubeSections.gaussian_quadratic_transport_compact
+#print axioms CubeSections.gaussian_stein_of_integrable
+#print axioms CubeSections.hasDerivAt_densityCDF
+#print axioms CubeSections.densityCDF_mem_Ioo
+#print axioms CubeSections.hasDerivAt_densityGaussianTransport
+#print axioms CubeSections.contDiff_densityGaussianTransport
+#print axioms CubeSections.densityGaussianTransport_density_jacobian
+#print axioms CubeSections.frameFunctionTransport_map_jacobian
+#print axioms CubeSections.frameFunctionTransport_integrable_image_iff
+#print axioms CubeSections.frameFunctionTransport_integral_image
+#print axioms CubeSections.positiveDensityLaw_isProbabilityMeasure
+#print axioms CubeSections.tendsto_densityCDF_atBot
+#print axioms CubeSections.tendsto_densityCDF_atTop
+#print axioms CubeSections.densityCDF_surjOn
+#print axioms CubeSections.densityGaussianTransport_map_law
+#print axioms CubeSections.hasDerivAt_positiveDensityInverse
+#print axioms CubeSections.contDiff_positiveDensityInverse
+#print axioms CubeSections.positiveDensityInverse_map_law
+#print axioms CubeSections.sincCubicGap_pos
+#print axioms CubeSections.sinc_gaussian_envelope
+#print axioms CubeSections.sinc_gaussian_envelope_strict
+
+#print axioms CubeSections.integral_sin_pi_cubed
+#print axioms CubeSections.integral_polynomial_sin_pi_cubed
+#print axioms CubeSections.integral_first_sinc_lobe_cubed
+#print axioms CubeSections.compactGaussianApprox_gaussianDominated
+#print axioms CubeSections.compactGaussianApprox_prekopa
+#print axioms CubeSections.integral_compactGaussianApprox_tendsto
+#print axioms CubeSections.compactMultiplicativeBM_of_positiveGaussianPrekopa

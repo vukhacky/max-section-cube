@@ -1,0 +1,43 @@
+axiom propext {a b : Prop} : Iff a b → Eq a b
+
+axiom Classical.choice.{u} {α : Sort u} : Nonempty α → α
+
+axiom Quot.sound.{u} {α : Sort u} {r : α → α → Prop} {a b : α} : r a b → Eq (Quot.mk r a) (Quot.mk r b)
+
+theorem CubeSections.maximalSectionVolume : CubeSections.UpperBoundStatement := _
+
+theorem CubeSections.balancedSectionAttains : CubeSections.AttainmentStatement := _
+
+theorem CubeSections.maximalSectionVolume_eq_iff : CubeSections.EqualityStatement := _
+
+theorem CubeSections.maximalSections_main : CubeSections.MainStatement := _
+
+def CubeSections.UpperBoundStatement :
+  Prop :=
+  forall (n k : Nat),
+  LE.le (OfNat.ofNat 1) k → LE.le k n → (forall (U : CubeSections.Frame n k),
+  LE.le (CubeSections.sectionVolume U) (CubeSections.sharpValue n k))
+
+def CubeSections.EqualityStatement :
+  Prop :=
+  forall (n k : Nat),
+  LE.le (OfNat.ofNat 1) k → LE.le k n → (forall (U : CubeSections.Frame n k),
+  Iff (Eq (CubeSections.sectionVolume U) (CubeSections.sharpValue n k)) (CubeSections.IsBalancedSection U))
+
+def CubeSections.AttainmentStatement :
+  Prop :=
+  forall (n k : Nat),
+  LE.le (OfNat.ofNat 1) k → LE.le k n → Exists
+    (fun (U : CubeSections.Frame n k) =>
+    And (CubeSections.IsBalancedSection U) (Eq (CubeSections.sectionVolume U) (CubeSections.sharpValue n k)))
+
+def CubeSections.MainStatement :
+  Prop :=
+  And CubeSections.UpperBoundStatement (And CubeSections.EqualityStatement CubeSections.AttainmentStatement)
+
+axiom propext {a b : Prop} : Iff a b → Eq a b
+
+axiom Classical.choice.{u} {α : Sort u} : Nonempty α → α
+
+axiom Quot.sound.{u} {α : Sort u} {r : α → α → Prop} {a b : α} : r a b → Eq (Quot.mk r a) (Quot.mk r b)
+

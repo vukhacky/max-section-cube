@@ -1,0 +1,82 @@
+{
+  "schema_version": "msc-computation-manifest/1",
+  "mathematical_scope": "Finite strict pair comparison for q in {2,3,4}; this computation alone is not the full maximal-section theorem.",
+  "manuscript": {
+    "path": "../manuscript/Maximal_Sections_of_the_Cube_Geometric_Proof.tex",
+    "sha256": "073a6485b263390f4471a3d974aa25e1d88df84cc204a9c1784400e597c1bd15",
+    "target_label": "prop:edge-pay",
+    "appendix_label": "sec:comparisons"
+  },
+  "certificate": {
+    "path": "data/pair_trees.json",
+    "sha256": "ab63a2c454f9f95cc79dc2e0e0593b470e2bfe147b5cf42e6f72b78a3cb5d45b",
+    "schema_version": "cube-pair-cover/1"
+  },
+  "parameters": {
+    "quotients": [
+      2,
+      3,
+      4
+    ],
+    "multiplicities": "1 <= m <= l <= q",
+    "domain": "[1/(q+1),1/q]^2",
+    "surplus": "1/4000",
+    "gamma_upper": "1/4",
+    "angle_bisections": 10,
+    "generator_depth_limit": 30
+  },
+  "formula_map": {
+    "charge_upper": "sec:comparisons, upper bound for entropy excess",
+    "angular_test": "eq:rational-angle-test",
+    "projection_angle": "eq:complementary-angle",
+    "strip_law": "eq:direct-strip-law",
+    "strip_test": "eq:rational-strip-test",
+    "expected_table": "tab:verification"
+  },
+  "expected_summary": {
+    "cases": 19,
+    "nodes": 6795,
+    "leaves": 3407,
+    "counts_by_quotient": {
+      "2": {
+        "pairs": 3,
+        "projection": 2606,
+        "strip": 531,
+        "maximum_depth": 18
+      },
+      "3": {
+        "pairs": 6,
+        "projection": 49,
+        "strip": 93,
+        "maximum_depth": 8
+      },
+      "4": {
+        "pairs": 10,
+        "projection": 28,
+        "strip": 100,
+        "maximum_depth": 6
+      }
+    }
+  },
+  "implementations": {
+    "verify_pairs.py": "Manuscript two-dimensional recursion; regenerates the table without reading stored trees.",
+    "verify_pairs_independent.py": "Independent three-dimensional subdivision; 10,257 terminal boxes.",
+    "verify.py": "Independent strict replay of stored rational trees and source/data checksum binding.",
+    "regenerate.py": "Deterministic tree generator; calls the independent replay before accepting generated output.",
+    "check_lean_data.py": "Data-only correspondence check against concrete generated Lean trees; not proof checking."
+  },
+  "requirements": {
+    "python": ">=3.10",
+    "third_party_packages": []
+  },
+  "script_sha256": {
+    "verify_pairs.py": "8e61bb984bc567ab8f6fe456c38fbc62e30d71839aac0f4b205fbb195907a2d7",
+    "verify_pairs_independent.py": "91b25c086caa74201978838558ed26c68cc5b11e50db6206f4892ec09fa7672e",
+    "verify.py": "93d3bda57c65b2d5a89ddd77fa81fea00d2157f58d8d48191d92ac38f6c489c9",
+    "regenerate.py": "e5310629f09662291367e4cb33f6e1f09a6de244c2445ea86410fd5e27b95b46",
+    "check_lean_data.py": "e5adf31eb2a7be41b7539ee7172d27f5d0a1611e593eb63f80901364eab1a30c",
+    "export_lean.py": "ca303086e78d3ed8574f8b2d184aca6aabcbfa388f19df0f3e7dcb1558915254",
+    "refresh_manifest.py": "46a72ea910f5d8ca576e9b65c19921fccf1be745d4e50032308adfa67308a122",
+    "tests/test_verifier.py": "5f48eebf3025fda08a52a65c386491f238a2625effc746e364df7e1692efbe17"
+  }
+}

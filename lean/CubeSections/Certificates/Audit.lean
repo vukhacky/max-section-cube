@@ -1,0 +1,40 @@
+import CubeSections.Certificates.GroupedComparison
+import CubeSections.Certificates.GeometricStripBridge
+import CubeSections.Certificates.GaussianIntegralBridge
+import CubeSections.Certificates.SmallQuotient
+import CubeSections.Certificates.SmallQuotientEnergy
+import CubeSections.Geometry.CentralDomination
+
+/-! Public certificate closure audit. The hypotheses of geometric and global
+incidence reductions remain visible in the printed theorem types. -/
+
+set_option maxRecDepth 8192
+
+#print axioms CubeSections.Certificates.allPairs_accepts
+#print axioms CubeSections.Certificates.allPairs_cover
+#print axioms CubeSections.Certificates.smallQuotientPairComparison
+#print axioms CubeSections.Certificates.sourceDirectStrip_of_exact
+#print axioms CubeSections.Certificates.sourceExactStrip_of_retained_volume
+#print axioms CubeSections.Certificates.sourceDirectStrip_of_retained_volume
+#print axioms CubeSections.grouped_charge_identity
+#print axioms CubeSections.grouped_charge_identity_positive_edges
+#print axioms CubeSections.raw_entropy_eq_grouped
+#print axioms CubeSections.degree_transport_identity
+#print axioms CubeSections.Certificates.groupedDeficitReduction_of_exact
+#print axioms CubeSections.Certificates.groupedDeficitReduction_upper
+#print axioms CubeSections.Certificates.pairAngularCost_le_integral_potentialPairEnergy
+#print axioms CubeSections.volume_squareRemovedCorners
+#print axioms CubeSections.retained_volume_of_pair_density
+#print axioms CubeSections.affineVolume_le_sectionVolume_of_midpointBM
+#print axioms CubeSections.Certificates.maximizing_smallQuotient_pair_comparison_of_density
+#print axioms CubeSections.Certificates.actualGroupedConstraints_of_density
+#print axioms CubeSections.Certificates.classWeights_zero_of_maximizing_smallQuotient
+#print axioms CubeSections.Certificates.isBalancedSection_of_maximizing_smallQuotient
+#print axioms CubeSections.Certificates.balanced_and_target_of_ratioMaximizing_smallQuotient
+#print axioms CubeSections.Certificates.ratio_eq_one_of_ratioMaximizing_smallQuotient
+#print axioms CubeSections.Certificates.frame_incidence_bound_of_energy
+#print axioms CubeSections.Certificates.framePairIncidence_coalesced
+#print axioms CubeSections.Certificates.actualClass_incidence_bound_of_energy
+#print axioms CubeSections.Certificates.frame_incidence_bound_of_determinant_transport
+#print axioms CubeSections.Certificates.balanced_and_target_of_ratioMaximizing_energy
+#print axioms CubeSections.Certificates.balanced_and_target_of_ratioMaximizing_determinant_transport

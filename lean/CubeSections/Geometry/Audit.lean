@@ -1,0 +1,175 @@
+import CubeSections.Geometry.RowBasis
+import CubeSections.Geometry.SignedBlocks
+import CubeSections.Geometry.Rigidity
+import CubeSections.Geometry.BalancedVolume
+import CubeSections.Geometry.StripCompetitor
+import CubeSections.Geometry.RowOrientation
+import CubeSections.Geometry.Attainment
+import CubeSections.Geometry.Invariance
+import CubeSections.Geometry.Lines
+import CubeSections.Geometry.Endpoints
+import CubeSections.Geometry.NormalizationFrame
+import CubeSections.Geometry.RawMatrix
+import CubeSections.Geometry.RowChanges
+import CubeSections.Geometry.Variational
+import CubeSections.Geometry.RowSupport
+import CubeSections.Geometry.WindowMaxima
+import CubeSections.Geometry.AffineContinuity
+import CubeSections.Geometry.Examples
+import CubeSections.Geometry.GroupedFrame
+import CubeSections.Geometry.MeasureContracts
+import CubeSections.Geometry.PairCoarea
+
+import CubeSections.Geometry.BoundedMarginal
+import CubeSections.Geometry.ClassDensityInduction
+import CubeSections.Geometry.LowDimensionClassDensity
+import CubeSections.Geometry.PairDensityRegularity
+
+import CubeSections.Geometry.ComplementDensity
+import CubeSections.Geometry.MidpointLowDimension
+
+#print CubeSections.balancedSectionAttains
+#check CubeSections.line_sectionVolume_le_sharp
+#check CubeSections.line_sectionVolume_eq_iff
+#check CubeSections.exists_normalizedFrame
+#check CubeSections.continuous_sectionVolume
+#check CubeSections.exists_maximizingFrame
+#check CubeSections.maximizing_leverage_gap
+#check CubeSections.exists_windowMaximizingFrame
+#check CubeSections.windowMaximizing_compare
+#check CubeSections.continuousAt_affineVolume_zero
+#check CubeSections.exampleFrame73_volume
+#print axioms CubeSections.BlockData.frame
+#print axioms CubeSections.BlockData.linearMap_norm
+#print axioms CubeSections.BlockData.range_frame
+#print axioms CubeSections.BlockData.frame_preimage_cube
+#print axioms CubeSections.BlockData.sectionMass_frame
+#print axioms CubeSections.BlockData.sectionVolume_frame
+#print axioms CubeSections.balancedFrame_volume
+#print axioms CubeSections.balancedSectionAttains
+#print axioms CubeSections.sectionVolume_eq_of_range_eq
+#print axioms CubeSections.sectionVolume_comp_domain_isometry
+#print axioms CubeSections.isBalancedSection_comp_domain_isometry
+#print axioms CubeSections.line_sectionVolume
+#print axioms CubeSections.line_sectionVolume_le_sharp
+#print axioms CubeSections.line_sectionVolume_eq_iff
+#print axioms CubeSections.fullDimension_sectionVolume
+#print axioms CubeSections.fullDimension_isBalancedSection
+#print axioms CubeSections.zeroDimension_sectionMass
+#print axioms CubeSections.linear_level_nonzero_null
+#print axioms CubeSections.ae_frame_coordinates_ne_boundary
+#print axioms CubeSections.normalizedFrame_range
+#print axioms CubeSections.normalizedFrame_normalizingEquiv
+#print axioms CubeSections.rawMass_ne_top
+#print axioms CubeSections.rawMass_pos
+#print axioms CubeSections.normalizedFrame_sectionVolume
+#print axioms CubeSections.exists_normalizedFrame
+#print axioms CubeSections.frame_isCompact
+#print axioms CubeSections.continuous_sectionVolume
+#print axioms CubeSections.exists_maximizingFrame
+#print axioms CubeSections.normDet_sq_eq_det_rawMatrix
+#print axioms CubeSections.replaceRowMap_gram
+#print axioms CubeSections.replaceRowMap_injective
+#print axioms CubeSections.duplicateRowMap_slab
+#print axioms CubeSections.deleteRowMap_gram
+#print axioms CubeSections.maximizing_replaceRow_det_le_one
+#print axioms CubeSections.maximizing_leverage_gap
+#print axioms CubeSections.duplicateRow_normalized_volume
+#print axioms CubeSections.deleteRow_normalized_volume_lower
+#print axioms CubeSections.rowVector_inner
+#print axioms CubeSections.rowVector_quadratic_sum
+#print axioms CubeSections.unitRow_norm
+#print axioms CubeSections.leverage_eq_zero_iff_coordinate_zero
+#print axioms CubeSections.exists_deleted_zeroRow_frame
+#print axioms CubeSections.maximizing_parallel_rows_eq_or_eq_neg
+#print axioms CubeSections.exists_windowMaximizingFrame
+#print axioms CubeSections.windowMaximizing_compare
+#print axioms CubeSections.affineMass_ne_top
+#print axioms CubeSections.affineMass_neg
+#print axioms CubeSections.affineMass_offset_add_frame
+#print axioms CubeSections.midpoint_opposite_affineSlabs_mem
+#print axioms CubeSections.affineMass_zeroDimension
+#print axioms CubeSections.continuousAt_affineVolume_zero
+#print axioms CubeSections.exampleFrame73_isBalanced
+#print axioms CubeSections.exampleFrame73_volume
+
+#print axioms CubeSections.span_rowVector
+#print axioms CubeSections.exists_rowBasis
+#print axioms CubeSections.exists_signedBlockData
+#print axioms CubeSections.isBalancedSection_of_rowReplacement_zeroAngular
+#print axioms CubeSections.sectionVolume_eq_sharp_of_isBalancedSection
+#print axioms CubeSections.mergeRowsMap_gram
+#print axioms CubeSections.mergeRowsMap_det
+#print axioms CubeSections.mergeRowsMap_injective
+#print axioms CubeSections.section_inter_strip_subset_mergeRowsMap_slab
+#print axioms CubeSections.maximizing_mergeRows_det_mul_retained_sq_le
+#print axioms CubeSections.exists_orientedFrame
+#print axioms CubeSections.rowClass_eq_iff
+#print axioms CubeSections.sum_rowClassMass
+#print axioms CubeSections.rowClassMass_eq_multiplicity_mul_leverage
+#print axioms CubeSections.frame_openSlab_mass
+#print axioms CubeSections.frame_openSlab_volume
+#print axioms CubeSections.rowClass_quadratic_sum
+#print axioms CubeSections.coalescedMap_norm
+#print axioms CubeSections.coalescedFrame
+#print axioms CubeSections.leverage_coalescedFrame
+#print axioms CubeSections.rowClassMass_le_one
+#print axioms CubeSections.classGram_complement_bound
+#print axioms CubeSections.classWeight_degree_multiplicity
+#print axioms CubeSections.rowClassAngle_lt_one
+#print axioms CubeSections.rowClassMultiplicity_le_of_weight_pos
+#print axioms CubeSections.rowClass_complementary_angle
+#print axioms CubeSections.rowClassRep_gram_sq
+#print axioms CubeSections.raw_entropy_eq_actualGrouped
+#print axioms CubeSections.actualClass_charge_identity
+#print axioms CubeSections.pairCoordinateMap_rightInverse
+#print axioms CubeSections.pairKernel_finrank
+#print axioms CubeSections.pairKernelFrame_range
+#print axioms CubeSections.pairGramDet_classRep_pos
+#print axioms CubeSections.remainingRowCount_eq_of_pos
+#print axioms CubeSections.reducedClassMap_norm
+#print axioms CubeSections.reducedClassFrame
+#print axioms CubeSections.fiber_subset_reduced_affineSlab
+#print axioms CubeSections.map_snd_restrict_eq_fiberDensity
+#print axioms CubeSections.orthogonal_projection_map_restrict
+#print axioms CubeSections.linearEquiv_map_withDensity
+#print axioms CubeSections.pairComplementEquiv
+#print axioms CubeSections.pairComplementMap_adjoint
+#print axioms CubeSections.pairComplementEquiv_normDet
+#print axioms CubeSections.pairSection_coarea
+#print axioms CubeSections.pairSliceMass_parametrized
+#print axioms CubeSections.pairClassSliceMass_le_affineMass
+
+#print axioms CubeSections.bounded_orthogonalProjection_measure_le
+#print axioms CubeSections.bounded_unit_marginal_measure_le
+#print axioms CubeSections.bounded_unit_marginal_restrict_measure_le
+#print axioms CubeSections.remainingRowCount_ge_quotient_fiber
+#print axioms CubeSections.reducedClassFrame_volume_le_radius_mul_restricted
+#print axioms CubeSections.pairClass_density_cap_of_affine_domination
+#print axioms CubeSections.pairClass_density_cap_of_central_bound
+#print axioms CubeSections.Certificates.sourcePairDensity_orientedPairFrame
+#print axioms CubeSections.actualClassDensity_of_midpointBM_restricted_induction
+#print axioms CubeSections.actualClassDensity_of_midpointBM_restricted_induction_quotient
+#print axioms CubeSections.affineMass_zero_le_sectionMass
+#print axioms CubeSections.affineMass_line_le_sectionMass
+#print axioms CubeSections.actualClassDensity_two_three
+#print axioms CubeSections.fiber_mem_iff_reduced
+#print axioms CubeSections.fiber_eq_reduced_or_empty
+#print axioms CubeSections.central_classKernel_slab
+#print axioms CubeSections.pairClassSliceMass_zero
+#print axioms CubeSections.measurable_pairSliceMass
+#print axioms CubeSections.measurable_pairPushforwardDensity
+#print axioms CubeSections.pairClassSliceMass_eventually_eq_affineMass
+#print axioms CubeSections.continuousAt_pairClassSliceMass_zero
+
+#print axioms CubeSections.measurable_affineMass
+#print axioms CubeSections.measurable_affineVolume
+#print axioms CubeSections.complementaryFrame_map_cube
+#print axioms CubeSections.complementaryFrame_map_cube_real_density
+#print axioms CubeSections.measurable_complementDensity
+#print axioms CubeSections.integrable_complementDensity
+#print axioms CubeSections.continuousAt_complementDensity_zero
+#print axioms CubeSections.complementDensity_zero
+#print axioms CubeSections.midpointBrunnMinkowski_zero
+#print axioms CubeSections.midpointBrunnMinkowski_one
+#print axioms CubeSections.midpointBrunnMinkowski_of_ge_two

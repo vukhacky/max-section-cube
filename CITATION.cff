@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite this repository and identify the commit used for verification."
+title: "Maximal sections of the cube: formal proof and exact computational supplement"
+type: software
+authors:
+  - family-names: "Vu"
+    given-names: "Khac Ky"
+    affiliation: "FPT University, Hanoi, Vietnam"
+repository-code: "https://github.com/vukhacky/max-section-cube"
+url: "https://github.com/vukhacky/max-section-cube"
+date-released: 2026-11-23
+keywords:
+  - "cube sections"
+  - "Lean"
+  - "formal verification"
+  - "exact rational arithmetic"
